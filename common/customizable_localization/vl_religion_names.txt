@@ -1,0 +1,85 @@
+﻿# Victoria 3 Lite: religion names that follow the "Pop Religions" game rule.
+# Called from localization/replace/english/vl_religion_names_l_english.yml through the player's country.
+# The game rule is global, so the scope only matters as something to call GetCustom on.
+
+vl_name_catholic = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_religion_groups }
+        localization_key = vl_relname_abrahamic
+    }
+    text = {
+        trigger = { has_game_rule = vl_religion_heritages }
+        localization_key = vl_relname_christian
+    }
+    text = {
+        localization_key = vl_relname_catholic
+    }
+}
+
+vl_name_confucian = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_religion_groups }
+        localization_key = vl_relname_eastern
+    }
+    text = {
+        trigger = { has_game_rule = vl_religion_heritages }
+        localization_key = vl_relname_taoic
+    }
+    text = {
+        localization_key = vl_relname_confucian
+    }
+}
+
+vl_name_animist = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_religion_groups }
+        localization_key = vl_relname_naturalistic
+    }
+    text = {
+        trigger = { has_game_rule = vl_religion_heritages }
+        localization_key = vl_relname_indigenous
+    }
+    text = {
+        localization_key = vl_relname_animist
+    }
+}
+
+vl_name_atheist = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_religion_groups }
+        localization_key = vl_relname_non_spiritual
+    }
+    text = {
+        trigger = { has_game_rule = vl_religion_heritages }
+        localization_key = vl_relname_materialist
+    }
+    text = {
+        localization_key = vl_relname_atheist
+    }
+}
+
+vl_name_sunni = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_religion_heritages }
+        localization_key = vl_relname_islamic
+    }
+    text = {
+        localization_key = vl_relname_sunni
+    }
+}
+
+vl_name_hindu = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_religion_heritages }
+        localization_key = vl_relname_dharmic
+    }
+    text = {
+        localization_key = vl_relname_hindu
+    }
+}

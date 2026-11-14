@@ -14,10 +14,18 @@ vl_pop_culture = {
 }
 
 vl_pop_religion = {
-    default = vl_one_religion
+    default = vl_religion_one_faith
 
-    vl_one_religion = {
-        flag = vl_one_religion
+    vl_religion_one_faith = {
+        flag = vl_religion_one_faith
+    }
+
+    vl_religion_groups = {
+        flag = vl_religion_groups
+    }
+
+    vl_religion_heritages = {
+        flag = vl_religion_heritages
     }
 
     vl_original_religions = {

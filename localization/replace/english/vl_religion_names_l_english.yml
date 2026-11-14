@@ -1,0 +1,7 @@
+﻿l_english:
+ catholic:0 "[GetPlayer.GetCustom('vl_name_catholic')]"
+ confucian:0 "[GetPlayer.GetCustom('vl_name_confucian')]"
+ animist:0 "[GetPlayer.GetCustom('vl_name_animist')]"
+ atheist:0 "[GetPlayer.GetCustom('vl_name_atheist')]"
+ sunni:0 "[GetPlayer.GetCustom('vl_name_sunni')]"
+ hindu:0 "[GetPlayer.GetCustom('vl_name_hindu')]"

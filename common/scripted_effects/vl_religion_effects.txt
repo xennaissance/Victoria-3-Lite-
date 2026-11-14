@@ -1,0 +1,105 @@
+﻿# Victoria 3 Lite: religion merging used by the "Pop Religions" game rule.
+# Heritage groups: Abrahamic -> Catholic, Eastern -> Confucian, Naturalistic -> Animist, Non-spiritual -> Atheist.
+# Heritages: Christian -> Catholic, Islamic -> Sunni, Dharmic -> Hindu, Taoic -> Confucian,
+#            Jewish, Indigenous (Animist) and Materialist (Atheist) stay as they are.
+# The surviving religions are renamed on screen to match (see customizable_localization/vl_religion_names.txt).
+
+vl_pop_religion_to_group_effect = {
+    if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_abrahamic } }
+        change_pop_religion = { target = rel:catholic value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_eastern } }
+        change_pop_religion = { target = rel:confucian value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_naturalistic } }
+        change_pop_religion = { target = rel:animist value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_non_spiritual } }
+        change_pop_religion = { target = rel:atheist value = 1 }
+    }
+}
+
+vl_country_religion_to_group_effect = {
+    if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_abrahamic } }
+        set_state_religion = rel:catholic
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_eastern } }
+        set_state_religion = rel:confucian
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_naturalistic } }
+        set_state_religion = rel:animist
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait_group = heritage_group_non_spiritual } }
+        set_state_religion = rel:atheist
+    }
+}
+
+vl_pop_religion_to_heritage_effect = {
+    if = {
+        limit = { religion = { has_discrimination_trait = heritage_christian } }
+        change_pop_religion = { target = rel:catholic value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_islamic } }
+        change_pop_religion = { target = rel:sunni value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_dharmic } }
+        change_pop_religion = { target = rel:hindu value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_taoic } }
+        change_pop_religion = { target = rel:confucian value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_jewish } }
+        change_pop_religion = { target = rel:jewish value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_indigenous } }
+        change_pop_religion = { target = rel:animist value = 1 }
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_materialist } }
+        change_pop_religion = { target = rel:atheist value = 1 }
+    }
+}
+
+vl_country_religion_to_heritage_effect = {
+    if = {
+        limit = { religion = { has_discrimination_trait = heritage_christian } }
+        set_state_religion = rel:catholic
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_islamic } }
+        set_state_religion = rel:sunni
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_dharmic } }
+        set_state_religion = rel:hindu
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_taoic } }
+        set_state_religion = rel:confucian
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_jewish } }
+        set_state_religion = rel:jewish
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_indigenous } }
+        set_state_religion = rel:animist
+    }
+    else_if = {
+        limit = { religion = { has_discrimination_trait = heritage_materialist } }
+        set_state_religion = rel:atheist
+    }
+}

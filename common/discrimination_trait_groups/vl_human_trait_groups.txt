@@ -6,3 +6,7 @@ vl_heritage_group_human = {
 vl_language_group_human = {
     type = language
 }
+
+vl_heritage_group_faith = {
+    type = heritage
+}

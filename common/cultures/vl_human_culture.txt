@@ -2,7 +2,7 @@
 # Adapted from the United Nations of Earth mod.
 vl_human = {
     color = rgb{227 155 150}
-    religion = atheist
+    religion = vl_faith
     heritage = vl_heritage_human
     language = vl_language_human
     

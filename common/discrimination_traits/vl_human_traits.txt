@@ -1,4 +1,4 @@
-﻿# Victoria 3 Lite: heritage and language for the Human culture.
+﻿# Victoria 3 Lite: heritage and language for the Human culture, and the religious heritage of the One Faith.
 vl_heritage_human = {
     type = heritage
     trait_group = vl_heritage_group_human
@@ -7,4 +7,9 @@ vl_heritage_human = {
 vl_language_human = {
     type = language
     trait_group = vl_language_group_human
+}
+
+vl_heritage_faith = {
+    type = heritage
+    trait_group = vl_heritage_group_faith
 }

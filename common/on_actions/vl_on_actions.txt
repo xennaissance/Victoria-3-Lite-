@@ -38,21 +38,36 @@ vl_unify_culture_on_action = {
     }
 }
 
-# Every country's state religion becomes Atheist, and every pop becomes Atheist.
+# Pop Religions rule. One faith: everyone follows the One Faith. Heritage groups and Heritages:
+# religions merge into one existing religion per group or heritage (see scripted_effects/vl_religion_effects.txt).
 vl_unify_religion_on_action = {
     effect = {
         if = {
-            limit = { has_game_rule = vl_one_religion }
+            limit = { has_game_rule = vl_religion_one_faith }
             every_country = {
-                set_state_religion = rel:atheist
+                set_state_religion = rel:vl_faith
             }
             every_state = {
                 every_scope_pop = {
                     change_pop_religion = {
-                        target = rel:atheist
+                        target = rel:vl_faith
                         value = 1
                     }
                 }
+            }
+        }
+        else_if = {
+            limit = { has_game_rule = vl_religion_groups }
+            every_country = { vl_country_religion_to_group_effect = yes }
+            every_state = {
+                every_scope_pop = { vl_pop_religion_to_group_effect = yes }
+            }
+        }
+        else_if = {
+            limit = { has_game_rule = vl_religion_heritages }
+            every_country = { vl_country_religion_to_heritage_effect = yes }
+            every_state = {
+                every_scope_pop = { vl_pop_religion_to_heritage_effect = yes }
             }
         }
     }
