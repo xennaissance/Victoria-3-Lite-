@@ -9,13 +9,15 @@ on_game_started = {
         vl_unify_religion_on_action
         vl_consolidate_pops_on_action
         vl_track_insurgents_on_action
+        vl_state_cache_on_action
     }
 }
 
-# Insurgent-country list (see below) is rebuilt every month and whenever a revolution starts.
+# Insurgent-country list and state cache (see below) are rebuilt every month; the list also whenever a revolution starts.
 on_monthly_pulse = {
     on_actions = {
         vl_track_insurgents_on_action
+        vl_state_cache_on_action
     }
 }
 
@@ -168,5 +170,41 @@ vl_track_insurgents_on_action = {
                 target = this
             }
         }
+    }
+}
+
+# State cache (memoization). The AI's state_value (ai_strategies/vl_ai_strategy_inject.txt) asked every
+# country, for every state, whether the state has a potential strait province and rubber, oil or gold
+# potential. Those depend only on the state, so they are stored here once a month as state variables
+# (used as flags). vl_state_cache_ready tells state_value the cache exists; before it does (a save
+# loaded mid-month) vanilla's own checks run.
+vl_state_cache_on_action = {
+    effect = {
+        every_state = {
+            if = {
+                limit = { has_any_potential_strait_province = yes }
+                set_variable = vl_strait_any
+            }
+            else_if = {
+                limit = { has_variable = vl_strait_any }
+                remove_variable = vl_strait_any
+            }
+            if = {
+                limit = {
+                    OR = {
+                        "num_potential_resources(bt:building_rubber_plantation)" > 0
+                        "num_potential_resources(bt:building_oil_rig)" > 0
+                        "num_potential_resources(bt:building_gold_field)" > 0
+                        "num_potential_resources(bt:building_gold_mine)" > 0
+                    }
+                }
+                set_variable = vl_valuable_resources
+            }
+            else_if = {
+                limit = { has_variable = vl_valuable_resources }
+                remove_variable = vl_valuable_resources
+            }
+        }
+        set_global_variable = vl_state_cache_ready
     }
 }
