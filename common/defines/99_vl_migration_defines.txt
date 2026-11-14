@@ -1,0 +1,21 @@
+# Victoria 3 Lite: migration settings carried over from the United Nations of Earth mod.
+# In UNE these removed a weekly freeze in ProcessEconomicMigration. Only market (internal) migration
+# is changed here; mass migration between countries is left as in vanilla.
+# Defines are global and cannot be switched by game rules.
+NPops = {
+    # Migrants only go to the single most attractive state in their market (within 1% of the top),
+    # so the weekly pass compares a handful of states instead of every near-equal one.
+    MARKET_MIGRATION_STATE_ATTRACTION_FRACTION = 0.99           # vanilla 0.75
+
+    # Pops only move when the gain is worth it.
+    MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 25   # vanilla 5
+
+    # Emigration comes only from states with near-zero pull, and only from states of 100k+ people.
+    MIGRATION_PULL_LOW_THRESHOLD = 0.001                        # vanilla 0.75
+    MIGRATION_MIN_STATE_POPS = 100000                           # vanilla 20000
+    MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0    # vanilla 0.05: unemployment no longer adds emigration room
+
+    # Fewer, larger moves.
+    MARKET_MIGRATION_PER_WEEK_FACTOR = 50                       # vanilla 5
+    MARKET_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.00001         # vanilla 0.05
+}

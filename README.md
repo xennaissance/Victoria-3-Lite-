@@ -28,6 +28,7 @@ Done:
   - **Original religions**: vanilla.
   Merged religions keep the underlying vanilla religion, so its events and journal entries still work, and show the group or heritage name on screen through customizable localization.
 - **Pop Consolidation** game rule (default: on). At game start every pop in a state takes the state's largest culture and largest religion. Works on top of the other two rules; most useful with Original cultures or religions.
+- **Migration** (always on): market migration settings from the United Nations of Earth mod. Migrants go to the single most attractive state in their market, and only states with near-zero pull send emigrants. Mass migration between countries is unchanged. See `common/defines/99_vl_migration_defines.txt`.
 - **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check.
 
 Not yet tested in game. Test checklist:
@@ -37,7 +38,8 @@ Not yet tested in game. Test checklist:
 4. Start games with Pop Cultures on Heritage groups and on Heritages: France's primary culture should read European / Gallic, homelands should cover the merged cultures' old homelands, and culture names should read correctly everywhere.
 5. With Pop Cultures and Pop Religions on Original and Pop Consolidation on: every state should show a single culture and a single religion, the one that was largest before.
 6. With Costly Alerts off, the low standard of living alert should never appear; with it on, it should.
-7. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
+7. Migration: in the market panel or a state's migration tooltip, immigrants should go to one top state at a time; watch the Tick Task List for ProcessEconomicMigration lock times.
+8. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
 
 ## Installing for development
 Clone this repository into `Documents\Paradox Interactive\Victoria 3\mod\` and enable it in the launcher.
