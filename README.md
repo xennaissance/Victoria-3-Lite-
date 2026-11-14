@@ -6,6 +6,7 @@ A performance mod for Victoria 3 (game version 1.15.1). Made for people who need
 - The gameplay loop stays: you still build an economy, run politics and laws, and fight diplomacy and wars.
 - Anything the loop does not depend on may be simplified or removed for speed.
 - Larger changes come with game rules so players can turn them off.
+- Players mostly care about what major and great powers do, so AI behaviour of smaller countries may be simplified freely.
 
 ## Planned changes
 - **Culture and religion unification** (on by default, with an opt-out game rule): every pop becomes one culture and one religion at game start, so pops merge and the simulation has far less to calculate.
@@ -35,7 +36,7 @@ Done:
   - Minor powers skip scoring regions they neither own a state in nor border.
   - The region stance scores (conquer, protect, colonize) check vanilla's "minor power outside its capital region gets 0" rule first instead of last, so the result is the same but most calls stop immediately.
   - With One culture, the "homeland states in this region" bonus is skipped, since every state is a homeland.
-- **AI regional objectives** (always on): the "protect a country" objective now skips countries with no rivals before searching the region for a country that borders a rival. Same result. This folder does not support `INJECT:`/`REPLACE:`, so `ai_regional_objectives/00_ai_regional_objectives.txt` is a full copy of vanilla.
+- **AI regional objectives** (always on): the "befriend countries" and "protect a country" objectives run only for major and great powers (including unrecognized major powers); minor powers keep their stances, interests and normal diplomacy. "Protect a country" also skips countries with no rivals before searching the region. This folder does not support `INJECT:`/`REPLACE:`, so `ai_regional_objectives/00_ai_regional_objectives.txt` is a full copy of vanilla.
 - **Cheaper movements** (always on):
   - Cultural and religious movements no longer scan every neighbouring state for an insurrection of their culture or religion. A list of countries with an insurrection is rebuilt monthly (and when a revolution starts), and only adjacent countries on it are checked. The effect is the same, up to a month late.
   - With One culture, the ethno-nationalist (cultural majority) movement no longer forms and existing ones disband. With One faith, the same applies to the religious majority (traditionalist) movement.

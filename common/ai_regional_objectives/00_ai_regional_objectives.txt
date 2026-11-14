@@ -228,6 +228,8 @@ ai_regional_objective_befriend_countries = {
 	stances = { stance_protect_region }
 
 	possible = {
+		# Victoria 3 Lite: only major and great powers (incl. unrecognized major powers) court and shield smaller countries
+		country_rank >= rank_value:unrecognized_major_power
 		scope:target_region = {
 			any_scope_country = {
 				aro_is_befriend_countries_target = { REGION = scope:target_region }
@@ -295,6 +297,8 @@ ai_regional_objective_protect_country = {
 	stances = { stance_protect_region }
 
 	possible = {
+		# Victoria 3 Lite: only major and great powers (incl. unrecognized major powers) court and shield smaller countries
+		country_rank >= rank_value:unrecognized_major_power
 		# Victoria 3 Lite: the target must border a rival, so skip countries with no rivals at all (same result)
 		OR = {
 			any_rival_country = { count >= 1 }

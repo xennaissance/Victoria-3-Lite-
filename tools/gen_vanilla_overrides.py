@@ -287,10 +287,18 @@ def patch_regional_objectives():
     # This folder does not support INJECT/REPLACE, so the whole file is overridden (user decision, 14 Nov 2026).
     rel = "common/ai_regional_objectives/00_ai_regional_objectives.txt"
     text = read(rel)
+    # Design rule (user, 14 Nov 2026): players mostly care about what major and great powers do, so
+    # the protect-stance objectives run only for countries ranked unrecognized major power (5) or higher.
+    rank_gate = ("\t\t# Victoria 3 Lite: only major and great powers (incl. unrecognized major powers) court and shield smaller countries\n"
+                 "\t\tcountry_rank >= rank_value:unrecognized_major_power\n")
+    s, o, e = find_block(text, "ai_regional_objective_befriend_countries")
+    blk = sub_once(r"(possible\s*=\s*\{\s*\n)", lambda m: m.group(1) + rank_gate, text[s:e], "befriend possible")
+    text = text[:s] + blk + text[e:]
     s, o, e = find_block(text, "ai_regional_objective_protect_country")
     blk = text[s:e]
     blk = sub_once(r"(possible\s*=\s*\{\s*\n)",
-                   r"\1\t\t# Victoria 3 Lite: the target must border a rival, so skip countries with no rivals at all (same result)\n"
+                   lambda m: m.group(1) + rank_gate +
+                   "\t\t# Victoria 3 Lite: the target must border a rival, so skip countries with no rivals at all (same result)\n"
                    "\t\tOR = {\n\t\t\tany_rival_country = { count >= 1 }\n\t\t\tany_rivaling_country = { count >= 1 }\n\t\t}\n",
                    blk, "protect possible")
     text = text[:s] + blk + text[e:]
