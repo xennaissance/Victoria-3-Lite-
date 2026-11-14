@@ -38,8 +38,11 @@ Done:
 - **Cheaper movements** (always on):
   - Cultural and religious movements no longer scan every neighbouring state for an insurrection of their culture or religion. A list of countries with an insurrection is rebuilt monthly (and when a revolution starts), and only adjacent countries on it are checked. The effect is the same, up to a month late.
   - With One culture, the ethno-nationalist (cultural majority) movement no longer forms and existing ones disband. With One faith, the same applies to the religious majority (traditionalist) movement.
+  - The same insurgent list now serves every other movement (ideological, national, pan-national, slave revolts), through vanilla's `neighboring_country_has_insurrectionary_movement_trigger`.
+  - The pro-slavery movement counted barracks and naval administrations in slave states by walking every building in the country; it now walks only the slave states.
+- **Cheaper law commitment treaties** (always on): when checking which laws can be committed to, the cheap conditions run first and the walk over every law runs last. Same result.
   Generated from the game files by `tools/gen_vanilla_overrides.py`; re-run it after every game patch.
-- **Override policy:** use `INJECT:` where it works and replace only what must change; mod compatibility is a secondary goal. `INJECT:` cannot override a trigger or effect block an object already has (for example a movement's `creation_trigger`), and script values are REPLACE-only, so the movement changes use `REPLACE:` on the three movements and one script value involved.
+- **Override policy:** use `INJECT:` where it works and replace only what must change; mod compatibility is a secondary goal. `INJECT:` cannot override a trigger or effect block an object already has (for example a movement's `creation_trigger`), and script values are REPLACE-only, so the movement and treaty changes use `REPLACE:` on only the objects involved (four movements, one script value, one scripted trigger, the law commitment article).
 
 Not yet tested in game. Test checklist:
 1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_` or `alert_types`.
