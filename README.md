@@ -31,6 +31,14 @@ Done:
 - **Migration** (always on): market migration settings from the United Nations of Earth mod. Migrants go to the single most attractive state in their market, and only states with near-zero pull send emigrants. Mass migration between countries is unchanged. See `common/defines/99_vl_migration_defines.txt`.
 - **Pop merging** (follows vanilla's pop consolidation rule, renamed "Pop Merge (Performance)"): pops with up to 500,000 workforce can merge with others of the same profession in the same building, instead of vanilla's 10-100. See `common/defines/99_vl_pop_merge_defines.txt`.
 - **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check. Alerts cannot be partially overridden, so the mod ships a full copy of vanilla's `00_alert_types.txt`.
+- **Simpler AI region scoring** (always on). In `ai_strategies/00_default_strategy.txt` (full copy of vanilla, patched):
+  - Minor powers skip scoring regions they neither own a state in nor border.
+  - The region stance scores (conquer, protect, colonize) check vanilla's "minor power outside its capital region gets 0" rule first instead of last, so the result is the same but most calls stop immediately.
+  - With One culture, the "homeland states in this region" bonus is skipped, since every state is a homeland.
+- **Cheaper movements** (always on):
+  - Cultural and religious movements no longer scan every neighbouring state for an insurrection of their culture or religion. A list of countries with an insurrection is rebuilt monthly (and when a revolution starts), and only adjacent countries on it are checked. The effect is the same, up to a month late.
+  - With One culture, the ethno-nationalist (cultural majority) movement no longer forms and existing ones disband. With One faith, the same applies to the religious majority (traditionalist) movement.
+  Generated from the game files by `tools/gen_vanilla_overrides.py`; re-run it after every game patch.
 
 Not yet tested in game. Test checklist:
 1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_` or `alert_types`.
@@ -41,7 +49,8 @@ Not yet tested in game. Test checklist:
 6. With Costly Alerts off, the low standard of living alert should never appear; with it on, it should.
 7. Migration: in the market panel or a state's migration tooltip, immigrants should go to one top state at a time; watch the Tick Task List for ProcessEconomicMigration lock times.
 8. Pop merging: after a few in-game years, the number of pops (Tick Task List MergeSmallPops activity, or pop counts in large states) should be much lower than vanilla. Watch unemployment: unemployed pops under the merge size with a poor worker ratio are turned into dependents.
-9. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
+9. AI and movements (live, works on a loaded save): load the 1880 benchmark save. With One culture / One faith, ethno-nationalist and religious majority movements should disband within days. Check `error.log` for `vl_insurgent_countries`, `00_default_strategy` and `vl_movement_overrides`. Run the 50 s test and a script profiler dump.
+10. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
 
 ## Optional ideas (not built)
 - **Keep original primary cultures.** The culture rules currently replace each country's primary cultures. Adding the new culture without removing the old ones would keep vanilla's culture-based map colors (Great Qing turns red without Manchu), dynamic country names (4 color rules, 18 name rules check primary cultures) and nation forming working, at almost no cost, since the old cultures have no pops.

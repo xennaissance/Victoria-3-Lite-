@@ -8,6 +8,20 @@ on_game_started = {
         vl_unify_culture_on_action
         vl_unify_religion_on_action
         vl_consolidate_pops_on_action
+        vl_track_insurgents_on_action
+    }
+}
+
+# Insurgent-country list (see below) is rebuilt every month and whenever a revolution starts.
+on_monthly_pulse = {
+    on_actions = {
+        vl_track_insurgents_on_action
+    }
+}
+
+on_revolution_start = {
+    on_actions = {
+        vl_track_insurgents_on_action
     }
 }
 
@@ -134,6 +148,24 @@ vl_consolidate_pops_on_action = {
                         value = 1
                     }
                 }
+            }
+        }
+    }
+}
+
+# Countries with at least one insurrectionary movement. Vanilla's cultural and religious movements
+# scanned every neighbouring state of their country for an insurrection, for every movement;
+# Lite's patched movements (common/political_movements/vl_movement_overrides.txt) check this short list instead.
+vl_track_insurgents_on_action = {
+    effect = {
+        clear_global_variable_list = vl_insurgent_countries
+        every_country = {
+            limit = {
+                any_political_movement = { is_insurrectionary = yes }
+            }
+            add_to_global_variable_list = {
+                name = vl_insurgent_countries
+                target = this
             }
         }
     }
