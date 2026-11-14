@@ -220,6 +220,14 @@ def patch_movements():
     mino = sub_once(NEIGHBOUR_SCAN, NEIGHBOUR_LIST, mino, "cultural minority neighbour scan")
     out.append("REPLACE:" + mino.lstrip() + "\n")
 
+    # Minority rights: with One culture there are no minorities, so it has no supporters; off under that rule.
+    mr = block_text(cult, "movement_minority_rights")
+    mr = wrap_field(mr, "creation_trigger", "\n\t\tNOT = { has_game_rule = vl_one_culture } # Victoria 3 Lite\n\t", "")
+    s_, o_, e_ = find_block(mr, "creation_trigger")
+    assert "disband_trigger" not in mr, "minority rights now has a disband_trigger; use gate_movement"
+    mr = mr[:e_] + "\n\tdisband_trigger = { has_game_rule = vl_one_culture } # Victoria 3 Lite" + mr[e_:]
+    out.append("REPLACE:" + mr.lstrip() + "\n")
+
     rmaj = block_text(rel, "movement_religious_majority")
     rmaj = gate_movement(rmaj, "vl_religion_one_faith")
     out.append("REPLACE:" + rmaj.lstrip() + "\n")
