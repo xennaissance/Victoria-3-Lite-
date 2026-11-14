@@ -34,7 +34,7 @@ vl_pop_religion = {
 }
 
 vl_pop_consolidation = {
-    default = vl_consolidation_off
+    default = vl_consolidation_on
 
     vl_consolidation_off = {
         flag = vl_consolidation_off

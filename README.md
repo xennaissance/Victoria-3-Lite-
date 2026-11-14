@@ -22,7 +22,7 @@ Done:
   - **Heritages**: seven religions (Christian, Islamic, Jewish, Dharmic, Taoic, Indigenous, Materialist), built on Catholic, Sunni, Jewish, Hindu, Confucian, Animist and Atheist.
   - **Original religions**: vanilla.
   Merged religions keep the underlying vanilla religion, so its events and journal entries still work, and show the group or heritage name on screen through customizable localization.
-- **Pop Consolidation** game rule (default: off). At game start every pop in a state takes the state's largest culture and largest religion. Works on top of the other two rules; most useful with Original cultures or religions.
+- **Pop Consolidation** game rule (default: on). At game start every pop in a state takes the state's largest culture and largest religion. Works on top of the other two rules; most useful with Original cultures or religions.
 - **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check.
 
 Not yet tested in game. Test checklist:
