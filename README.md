@@ -35,6 +35,7 @@ Done:
   - Minor powers skip scoring regions they neither own a state in nor border.
   - The region stance scores (conquer, protect, colonize) check vanilla's "minor power outside its capital region gets 0" rule first instead of last, so the result is the same but most calls stop immediately.
   - With One culture, the "homeland states in this region" bonus is skipped, since every state is a homeland.
+- **AI regional objectives** (always on): the "protect a country" objective now skips countries with no rivals before searching the region for a country that borders a rival. Same result. This folder does not support `INJECT:`/`REPLACE:`, so `ai_regional_objectives/00_ai_regional_objectives.txt` is a full copy of vanilla.
 - **Cheaper movements** (always on):
   - Cultural and religious movements no longer scan every neighbouring state for an insurrection of their culture or religion. A list of countries with an insurrection is rebuilt monthly (and when a revolution starts), and only adjacent countries on it are checked. The effect is the same, up to a month late.
   - With One culture, the ethno-nationalist (cultural majority) movement no longer forms and existing ones disband. With One faith, the same applies to the religious majority (traditionalist) movement.
@@ -43,7 +44,7 @@ Done:
 - **Fascism journal entry bar** (always on): its revanchism factor checks state ownership before claims and homelands. With One culture the homeland part is skipped: every state is a homeland there, so vanilla's rule would have added progress for every foreign state in the world. Injected copy of the bar's `monthly_progress` (`scripted_progress_bars/vl_progress_bar_inject.txt`).
 - **Cheaper law commitment treaties** (always on): when checking which laws can be committed to, the cheap conditions run first and the walk over every law runs last. Same result.
   Generated from the game files by `tools/gen_vanilla_overrides.py`; re-run it after every game patch.
-- **Override policy:** use `INJECT:` where it works and replace only what must change; mod compatibility is a secondary goal. `INJECT:` cannot override a trigger or effect block an object already has (for example a movement's `creation_trigger`), and script values are REPLACE-only, so the movement and treaty changes use `REPLACE:` on only the objects involved (four movements, one script value, one scripted trigger, the law commitment article).
+- **Override policy:** use `INJECT:` where it works and replace only what must change; mod compatibility is a secondary goal. `INJECT:` cannot override a trigger or effect block an object already has (for example a movement's `creation_trigger`), and script values are REPLACE-only, so the movement and treaty changes use `REPLACE:` on only the objects involved (four movements, one script value, one scripted trigger, the law commitment article). Folders without `INJECT:`/`REPLACE:` support get a full-file override.
 
 Not yet tested in game. Test checklist:
 1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_` or `alert_types`.
