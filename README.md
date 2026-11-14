@@ -36,6 +36,7 @@ Done:
   - Minor powers skip scoring regions they neither own a state in nor border.
   - The region stance scores (conquer, protect, colonize) check vanilla's "minor power outside its capital region gets 0" rule first instead of last, so the result is the same but most calls stop immediately.
   - With One culture, the "homeland states in this region" bonus is skipped, since every state is a homeland.
+- **AI state desire under One culture** (always on): with One culture every state is a homeland of every country, so vanilla's AI wanted every state in the world as a "homeland". Under that rule the homeland ambition and the foreign-homeland bonuses in `state_value` are off; claims, borders, regions and spheres still drive conquest.
 - **AI regional objectives** (always on): the "befriend countries" and "protect a country" objectives run only for major and great powers (including unrecognized major powers); minor powers keep their stances, interests and normal diplomacy. "Protect a country" also skips countries with no rivals before searching the region. This folder does not support `INJECT:`/`REPLACE:`, so `ai_regional_objectives/00_ai_regional_objectives.txt` is a full copy of vanilla.
 - **Cheaper movements** (always on):
   - Cultural and religious movements no longer scan every neighbouring state for an insurrection of their culture or religion. A list of countries with an insurrection is rebuilt monthly (and when a revolution starts), and only adjacent countries on it are checked. The effect is the same, up to a month late.

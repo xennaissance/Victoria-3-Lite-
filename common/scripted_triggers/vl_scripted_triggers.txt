@@ -14,3 +14,8 @@ REPLACE:neighboring_country_has_insurrectionary_movement_trigger = {
 		}
 	}
 }
+
+REPLACE:ai_state_ambition_homeland = {
+	NOT = { has_game_rule = vl_one_culture } # Victoria 3 Lite
+	scope:target_state = { is_homeland_of_country_cultures = root }
+}

@@ -848,4 +848,1396 @@ INJECT:ai_strategy_default = {
 			}
 		}
 	}
+
+	state_value = {
+		value = 0
+
+		if = { # For our countries states
+			limit = {
+				scope:target_state = { owner = root }
+			}
+			add = {
+				value = 20
+				desc = "STATE_VALUE_BASE_DESIRE"
+			}
+
+			add = {
+				value = scope:target_state.state_population
+				divide = 100000
+				max = 30
+				desc = "STATE_VALUE_POPULATION"
+			}
+
+			add = {
+				value = scope:target_state.gdp
+				divide = 100000
+				max = 30
+				desc = "STATE_VALUE_GDP"
+			}
+
+			if = {
+				limit = {
+					scope:target_state = { ai_can_incorporate_state = yes }
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_CAN_INCORPORATE"
+				}
+			}
+
+			if = { # Important Straits
+				limit = {
+					scope:target_state = {
+						state_region = { is_important_strait_state_region = yes }
+						has_any_potential_strait_province = yes
+					}
+				}
+				add = {
+					value = 200
+					desc = "STATE_VALUE_CONTROLS_STRAIT"
+				}
+			}
+			else_if = { # Lesser Straits
+				limit = {
+					scope:target_state = {
+						has_any_potential_strait_province = yes
+					}
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_CONTROLS_STRAIT"
+				}
+			}
+
+			if = {
+				limit = { scope:target_state = { is_treaty_port = yes } }
+				add = {
+					value = 20
+					desc = "STATE_VALUE_TREATY_PORT"
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							AND = {
+								root = {
+									has_technology_researched = rubber_mastication
+								}
+								"num_potential_resources(bt:building_rubber_plantation)" > 0
+							}
+							AND = {
+								root = {
+									has_technology_researched = pumpjacks
+								}
+								"num_potential_resources(bt:building_oil_rig)" > 0
+							}
+							"num_potential_resources(bt:building_gold_field)" > 0
+							"num_potential_resources(bt:building_gold_mine)" > 0
+						}
+					}
+				}
+				multiply = {
+					add = 1
+					if = {
+						limit = {
+							has_technology_researched = rubber_mastication
+							"scope:target_state.num_potential_resources(bt:building_rubber_plantation)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_rubber_plantation)"
+							divide = 100
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = pumpjacks
+							"scope:target_state.num_potential_resources(bt:building_oil_rig)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_oil_rig)"
+							divide = 100
+						}
+					}
+					if = {
+						limit = {
+							"scope:target_state.num_potential_resources(bt:building_gold_field)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_gold_field)"
+							divide = 100
+						}
+					}
+					if = {
+						limit = {
+							"scope:target_state.num_potential_resources(bt:building_gold_mine)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_gold_mine)"
+							divide = 100
+						}
+					}
+					desc = "STATE_VALUE_VALUABLE_RESOURCE_POTENTIAL"
+				}
+			}
+
+			if = { # Very reluctant to cede incorporated states
+				limit = {
+					scope:target_state = {
+						OR = {
+							is_incorporated = yes
+							ai_can_incorporate_state = yes
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						scope:target_state = { is_homeland_of_country_cultures = root }
+					}
+					multiply = {
+						value = 8.0
+						desc = "STATE_VALUE_INCORPORATED_HOMELAND_RELUCTANCE"
+					}
+				}
+				else = {
+					multiply = {
+						value = 6.0
+						desc = "STATE_VALUE_INCORPORATED_RELUCTANCE"
+					}
+				}
+			}
+			else_if = { # Reluctant to cede states adjacent or sea adjacent to incorporate states
+				limit = {
+					scope:target_state = {
+						OR = {
+							any_neighbouring_state = {
+								owner = root
+								is_incorporated = yes
+							}
+							any_sea_node_adjacent_state = {
+								owner = root
+								is_incorporated = yes
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						scope:target_state = { is_homeland_of_country_cultures = root }
+					}
+					multiply = {
+						value = 6.0
+						desc = "STATE_VALUE_NEXT_TO_INCORPORATED_HOMELAND"
+					}
+				}
+				else = {
+					multiply = {
+						value = 4.0
+						desc = "STATE_VALUE_NEXT_TO_INCORPORATED"
+					}
+				}
+			}
+			else = { # Value owned states higher than foreign states by default
+				if = {
+					limit = {
+						scope:target_state = { is_homeland_of_country_cultures = root }
+					}
+					multiply = {
+						value = 3.0
+						desc = "STATE_VALUE_OWN_HOMELAND"
+					}
+				}
+				else = {
+					multiply = {
+						value = 2.0
+						desc = "STATE_VALUE_OWN_STATE"
+					}
+				}
+			}
+
+			# Isolated states are worth less
+			# Check that this isn't caused by convoy raiding through the is_at_war trigger
+			if = {
+				limit = {
+					is_at_war = no
+					scope:target_state = { is_isolated_from_market = yes }
+				}
+				multiply = {
+					value = 0.5
+					desc = "STATE_VALUE_ISOLATED_FROM_MARKET"
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							any_neighbouring_state = { owner = root }
+						}
+					}
+					multiply = {
+						value = 0.5
+						desc = "STATE_VALUE_ISOLATED_NO_NEIGHBOUR"
+					}
+				}
+			}
+		}
+		else = { # For other countries states
+			add = {
+				value = 10
+				desc = "STATE_VALUE_BASE_DESIRE"
+			}
+
+			add = {
+				value = scope:target_state.state_population
+				divide = 100000
+				max = 15
+				desc = "STATE_VALUE_POPULATION"
+			}
+
+			add = {
+				value = scope:target_state.gdp
+				divide = 100000
+				max = 15
+				desc = "STATE_VALUE_GDP"
+			}
+
+			if = {
+				limit = {
+					scope:target_state = { ai_can_incorporate_state = yes }
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_CAN_INCORPORATE"
+				}
+			}
+
+			if = { # Important Straits
+				limit = {
+					country_rank >= rank_value:great_power
+					navy_size >= 100
+					scope:target_state = {
+						state_region = { is_important_strait_state_region = yes }
+						has_any_potential_strait_province = yes
+					}
+				}
+				add = {
+					value = 200
+					desc = "STATE_VALUE_CONTROLS_STRAIT"
+				}
+			}
+			else_if = { # Lesser Straits
+				limit = {
+					country_rank >= rank_value:great_power
+					navy_size >= 100
+					scope:target_state = {
+						has_any_potential_strait_province = yes
+					}
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_CONTROLS_STRAIT"
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_state = { is_treaty_port = yes }
+				}
+				add = {
+					value = 10
+					desc = "STATE_VALUE_TREATY_PORT"
+				}
+
+				if = {
+					limit = {
+						scope:target_state.state_region = {
+							any_scope_state = {
+								owner = root
+							}
+						}
+					}
+					add = 40
+				}
+			}
+
+			if = { # High-fervour AI really wants to take its homelands
+				limit = {
+					country_fervor_primary_culture > 10
+					scope:target_state = {
+						AND = { NOT = { has_game_rule = vl_one_culture } is_homeland_of_country_cultures = root }
+					}
+					scope:target_country = {
+						NOT = {
+							any_primary_culture = {
+								is_primary_culture_of = root
+							}
+						}
+					}
+				}
+				add = {
+					value = country_fervor_primary_culture
+					divide = 2
+					desc = "STATE_VALUE_HOMELAND_FERVOR"
+				}
+			}
+
+			# Strategy-specific values, move these back into their own files later
+			# Maintain Balance of Power
+			if = {
+				limit = {
+					has_strategy = ai_strategy_maintain_power_balance
+					ai_state_ambition_claim = yes
+				}
+				add = {
+					value = 20
+					desc = "STATE_VALUE_MAINTAIN_POWER_BALANCE_CLAIM"
+				}
+			}
+
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_maintain_power_balance
+			# 		ai_state_ambition_border = yes
+			# 		ai_state_has_core_ambition = no
+			# 	}
+			# 	add = {
+			# 		value = -15
+			# 		desc = "STATE_VALUE_MAINTAIN_POWER_BALANCE_NO_OPPORTUNISM"
+			# 	}
+			# }
+
+			# Territorial Expansion
+			if = {
+				limit = {
+					has_strategy = ai_strategy_territorial_expansion
+					ai_state_ambition_border = yes
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_TERRITORIAL_EXPANSION_BORDER"
+				}
+			}
+
+			if = {
+				limit = {
+					has_strategy = ai_strategy_territorial_expansion
+					ai_state_ambition_homeland = yes
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_TERRITORIAL_EXPANSION_HOMELAND"
+				}
+			}
+
+			# Acquire Colonies
+			if = {
+				limit = {
+					has_strategy = ai_strategy_colonial_expansion
+					ai_state_ambition_colonial = yes
+				}
+				add = {
+					value = 30
+					desc = "STATE_VALUE_COLONIAL_EXPANSION_COLONIAL_TARGET"
+				}
+			}
+
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_colonial_expansion
+			# 		ai_state_has_core_ambition = no
+			# 		scope:target_country = {
+			# 			NOR = {
+			# 				is_country_type = unrecognized
+			# 				is_country_type = decentralized
+			# 			}
+			# 		}
+			# 	}
+			# 	add = {
+			# 		value = -20
+			# 		desc = "STATE_VALUE_COLONIAL_EXPANSION_RECOGNISED_OWNER"
+			# 	}
+			# }
+
+			# Armed Isolationism
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_armed_isolationism
+			# 		ai_state_has_core_ambition = no
+			# 	}
+			# 	add = {
+			# 		value = -25
+			# 		desc = "STATE_VALUE_ARMED_ISOLATIONISM_NO_AMBITION"
+			# 	}
+			# }
+
+			# Economic Imperialism
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_economic_imperialism
+			# 		ai_state_has_core_ambition = no
+			# 		scope:target_country = {
+			# 			NOR = {
+			# 				is_country_type = unrecognized
+			# 				is_country_type = decentralized
+			# 			}
+			# 		}
+			# 	}
+			# 	add = {
+			# 		value = -25
+			# 		desc = "STATE_VALUE_ECONOMIC_IMPERIALISM_PREFERS_TRADE"
+			# 	}
+			# }
+
+			# Socialism in One Country
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_socialism_in_one_country
+			# 		ai_state_has_core_ambition = no
+			# 	}
+			# 	add = {
+			# 		value = -25
+			# 		desc = "STATE_VALUE_SOCIALISM_IN_ONE_COUNTRY_NO_AMBITION"
+			# 	}
+			# }
+
+			# Anti Imperialism
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_anti_imperialism
+			# 		ai_state_ambition_colonial = yes
+			# 	}
+			# 	add = {
+			# 		value = -40
+			# 		desc = "STATE_VALUE_ANTI_IMPERIALISM_NO_COLONIES"
+			# 	}
+			# }
+
+			# Restore Natural Borders of France
+			if = {
+				limit = {
+					has_strategy = ai_strategy_restore_natural_borders
+					ai_state_ambition_homeland = yes
+				}
+				add = {
+					value = 35
+					desc = "STATE_VALUE_RESTORE_NATURAL_BORDERS_HOMELAND"
+				}
+			}
+
+			if = {
+				limit = {
+					has_strategy = ai_strategy_restore_natural_borders
+					ai_state_ambition_claim = yes
+				}
+				add = {
+					value = 35
+					desc = "STATE_VALUE_RESTORE_NATURAL_BORDERS_CLAIM"
+				}
+			}
+
+			# if = {
+			# 	limit = {
+			# 		has_strategy = ai_strategy_restore_natural_borders
+			# 		ai_state_ambition_border = yes
+			# 		ai_state_has_core_ambition = no
+			# 	}
+			# 	add = {
+			# 		value = -20
+			# 		desc = "STATE_VALUE_RESTORE_NATURAL_BORDERS_NOT_OURS"
+			# 	}
+			# }
+
+			# How much the AI actually wants this state, as opposed to how valuable the state is.
+			# Every "ambition" it has adds its weight; a state it has no reason to want keeps only the floor,
+			# so it is still worth something in a treaty but never worth starting a war over.
+			# Placed here deliberately so that JEs can override it below.
+			multiply = {
+				value = ai_state_ambition_floor
+
+				if = {
+					limit = { ai_state_ambition_claim = yes }
+					add = ai_state_ambition_claim_weight
+				}
+				if = {
+					limit = { ai_state_ambition_homeland = yes }
+					add = ai_state_ambition_homeland_weight
+				}
+				if = {
+					limit = { ai_state_ambition_capital_region = yes }
+					add = ai_state_ambition_capital_region_weight
+				}
+				if = {
+					limit = { ai_state_ambition_split_state = yes }
+					add = ai_state_ambition_split_state_weight
+				}
+				if = {
+					limit = { ai_state_ambition_overlord_gift = yes }
+					add = ai_state_ambition_overlord_gift_weight
+				}
+				if = {
+					limit = { ai_state_ambition_colonial = yes }
+					add = ai_state_ambition_colonial_weight
+				}
+				if = {
+					limit = { ai_state_ambition_border = yes }
+					add = ai_state_ambition_border_weight
+				}
+				if = {
+					limit = { ai_state_ambition_sphere = yes }
+					add = ai_state_ambition_sphere_weight
+				}
+				if = {
+					limit = { ai_state_ambition_regional_objective = yes }
+					add = ai_state_ambition_regional_objective_weight
+				}
+
+				max = ai_state_ambition_max
+				desc = "STATE_VALUE_AMBITION"
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						OR = {
+							AND = {
+								root = {
+									has_technology_researched = rubber_mastication
+								}
+								"num_potential_resources(bt:building_rubber_plantation)" > 0
+							}
+							AND = {
+								root = {
+									has_technology_researched = pumpjacks
+								}
+								"num_potential_resources(bt:building_oil_rig)" > 0
+							}
+							"num_potential_resources(bt:building_gold_field)" > 0
+							"num_potential_resources(bt:building_gold_mine)" > 0
+						}
+					}
+				}
+				multiply = {
+					add = 1
+					if = {
+						limit = {
+							has_technology_researched = rubber_mastication
+							"scope:target_state.num_potential_resources(bt:building_rubber_plantation)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_rubber_plantation)"
+							divide = 100
+						}
+					}
+					if = {
+						limit = {
+							has_technology_researched = pumpjacks
+							"scope:target_state.num_potential_resources(bt:building_oil_rig)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_oil_rig)"
+							divide = 100
+						}
+					}
+					if = {
+						limit = {
+							"scope:target_state.num_potential_resources(bt:building_gold_field)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_gold_field)"
+							divide = 100
+						}
+					}
+					if = {
+						limit = {
+							"scope:target_state.num_potential_resources(bt:building_gold_mine)" > 0
+						}
+						add = {
+							value = "scope:target_state.num_potential_resources(bt:building_gold_mine)"
+							divide = 100
+						}
+					}
+					desc = "STATE_VALUE_VALUABLE_RESOURCE_POTENTIAL"
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_state = {
+						primary_cultures_percent_state = {
+							target_country = root
+							value >= 0.05
+						}
+					}
+				}
+				multiply = {
+					value = {
+						add = 1
+						add = "scope:target_state.primary_cultures_percent_state(root)"
+						max = 1.5
+					}
+					desc = "STATE_VALUE_PRIMARY_CULTURES_PERCENT"
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_state = { has_claim_by = root }
+				}
+				multiply = {
+					value = 2.0
+					desc = "STATE_VALUE_CLAIM"
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = { has_strategic_land_adjacency = scope:target_state }
+					scope:target_state = { is_coastal = no }
+				}
+				multiply = {
+					value = 0.5
+					desc = "STATE_VALUE_UNREACHABLE_INLAND"
+				}
+			}
+
+			if = {
+				limit = {
+					has_strategic_land_adjacency = scope:target_country
+					NOT = { has_strategic_land_adjacency = scope:target_state }
+				}
+				multiply = {
+					value = 0.5
+					desc = "STATE_VALUE_NOT_STRATEGICALLY_ADJACENT"
+				}
+			}
+			else_if = {
+				limit = {
+					is_adjacent_to_country = scope:target_country
+					NOT = { is_adjacent_to_state = scope:target_state }
+				}
+				multiply = {
+					value = 0.75
+					desc = "STATE_VALUE_NOT_ADJACENT_TO_STATE"
+				}
+			}
+
+			# More reluctant to get involved in plays for states that AI doesn't strongly desire
+			if = {
+				limit = {
+					is_diplomatic_play_involved_with = scope:target_country
+					ai_state_has_core_ambition = no
+				}
+				multiply = {
+					value = 0.5
+					desc = "STATE_VALUE_ALREADY_IN_PLAY_WEAK_DESIRE"
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_state = { AND = { NOT = { has_game_rule = vl_one_culture } is_homeland_of_country_cultures = root } }
+				}
+				multiply = {
+					value = 1.5
+					desc = "STATE_VALUE_FOREIGN_HOMELAND"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_boxer_rebellion
+					scope:target_state.state_region = { is_homeland = cu:han }
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_BOXER_REBELLION"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_greek_nationalism
+					scope:target_state.state_region = { is_homeland = cu:greek }
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_GREEK_NATIONALISM"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_eastern_question_austria
+					scope:target_state = { state_region = s:STATE_BOSNIA }
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_EASTERN_QUESTION"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_consolidate_colonial_rule
+					scope:target_country = {
+						is_country_type = unrecognized
+						target_is_our_or_fellow_subject = no
+					}
+					scope:target_state = {
+						is_in_geographic_region = geographic_region_indian_frontier
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_CONSOLIDATE_COLONIAL_RULE"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_expanding_paraguay
+					scope:target_country = {
+						has_state_in_state_region = STATE_CORRIENTES
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_PARAGUAY_CORE"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_expanding_paraguay
+					scope:target_country = {
+						OR = {
+							has_state_in_state_region = STATE_SANTA_FE
+							has_state_in_state_region = STATE_PARANA
+							has_state_in_state_region = STATE_RIO_GRANDE_DO_SUL
+						}
+					}
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_JE_PARAGUAY_SECONDARY"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_age_of_princes
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_AMHARA
+							state_region = s:STATE_GONDER
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_AGE_OF_PRINCES"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_unify_afghanistan
+					scope:target_state = {
+						AND = { NOT = { has_game_rule = vl_one_culture } is_homeland_of_country_cultures = root }
+					}
+				}
+				add = {
+					value = 75
+					desc = "STATE_VALUE_JE_UNIFY_AFGHANISTAN"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_eastern_frontier
+					scope:target_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_persia_old
+							is_in_geographic_region = geographic_region_central_asia_old
+							is_in_geographic_region = geographic_region_india
+						}
+						has_claim_by = ROOT
+					}
+				}
+				add = {
+					value = 75
+					desc = "STATE_VALUE_JE_EASTERN_FRONTIER"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_manifest_destiny_mexico
+				}
+
+				if = {
+					limit = {
+						scope:target_state = {
+							OR = {
+								state_region = s:STATE_COLORADO
+								state_region = s:STATE_UTAH
+								state_region = s:STATE_TEXAS
+								state_region = s:STATE_KANSAS
+								state_region = s:STATE_OKLAHOMA
+								state_region = s:STATE_ARIZONA
+								state_region = s:STATE_CALIFORNIA
+								state_region = s:STATE_NEVADA
+								state_region = s:STATE_NEW_MEXICO
+							}
+						}
+					}
+					add = {
+						value = 50
+						desc = "STATE_VALUE_JE_MANIFEST_DESTINY"
+					}
+
+					if = {
+						limit = { is_adjacent_to_state = scope:target_state }
+						multiply = {
+							value = 2
+							desc = "STATE_VALUE_JE_MANIFEST_DESTINY_ADJACENT"
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_conquer_oregon
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_WASHINGTON
+							state_region = s:STATE_IDAHO
+							state_region = s:STATE_OREGON
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_CONQUER_OREGON"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_alaska
+					scope:target_state = {
+						state_region = s:STATE_ALASKA
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_ALASKA"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_the_eastern_border
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_OUTER_MANCHURIA
+							state_region = s:STATE_JETISY
+							state_region = s:STATE_TOMSK
+							state_region = s:STATE_KIRGHIZIA
+							state_region = s:STATE_AMUR
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_EASTERN_BORDER"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_conquest_of_algeria
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_ALGIERS
+							state_region = s:STATE_CONSTANTINE
+							state_region = s:STATE_ORAN
+							state_region = s:STATE_SAHARA
+							state_region = s:STATE_EAST_SAHARA
+						}
+					}
+				}
+				add = {
+					value = 100
+					desc = "STATE_VALUE_JE_CONQUEST_OF_ALGERIA"
+				}
+			}
+
+			if = { #Russian Central Asia
+				limit = {
+					has_journal_entry = je_conquest_of_central_asia
+					scope:target_state = {
+						region = sr:region_central_asia
+					}
+				}
+				add = {
+					value = 75
+					desc = "STATE_VALUE_JE_CENTRAL_ASIA"
+				}
+			}
+
+			if = { #Russia wants Western borderlands
+				limit = {
+					has_journal_entry = je_russification
+					scope:target_state = {
+						OR = {
+							is_in_geographic_region = geographic_region_finland_old
+							is_in_geographic_region = geographic_region_baltic_states_old
+							is_in_geographic_region = geographic_region_poland_old
+						}
+					}
+				}
+				add = 25
+			}
+
+			if = { # Japan wants to consolidate herself
+				limit = {
+					c:JAP ?= this
+					NOT = { has_law_or_variant = law_type:law_serfdom }
+					scope:target_state ?= {
+						is_in_geographic_region = geographic_region_japan
+					}
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_JAPAN_CONSOLIDATION"
+				}
+			}
+
+			if = {
+				limit = {
+					country_has_primary_culture = cu:russian
+					OR = {
+						has_law = law_type:law_national_supremacy
+						has_law = law_type:law_official_nationality
+					}
+					has_technology_researched = nationalism
+					scope:target_state = {
+						owner = {
+							OR = {
+								c:OZH ?= this
+								c:UZH ?= this
+								c:KZH ?= this
+								c:KAZ ?= this
+							}
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_RUSSIAN_STEPPE"
+				}
+			}
+
+			if = {
+				limit = {
+					ai_russia_wants_caucasus_subject_annexed = yes
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_RUSSIAN_SUBJECT_ABSORPTION"
+				}
+			}
+
+			if = {
+				limit = {
+					ai_russia_wants_bukey_orda_annexed = yes
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_RUSSIAN_STEPPE"
+				}
+			}
+
+			if = { # Russia eyes the Straits once the Eastern Question has gone her way
+				limit = {
+					c:RUS ?= this
+					has_variable = russia_eastern_question_victory
+					scope:target_state = {
+						state_region = s:STATE_EASTERN_THRACE
+					}
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_RUSSIAN_STRAITS"
+				}
+			}
+
+			if = { # Dutch East Indies wishes to consolidate Indonesia
+				limit = {
+					c:DEI ?= this
+					scope:target_state = {
+						region = sr:region_indonesia
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_DEI_INDONESIA"
+				}
+			}
+
+			# French Natural Borders
+			if = {
+				limit = {
+					has_journal_entry = je_french_natural_borders
+					OR = {
+						has_strategy = ai_strategy_territorial_expansion
+						has_strategy = ai_strategy_restore_natural_borders
+					}
+					scope:target_state = {
+						OR = {
+							state_region = {
+								is_homeland = cu:french
+							}
+							state_region = s:STATE_WALLONIA
+							state_region = s:STATE_FLANDERS
+							state_region = s:STATE_RHINELAND
+							state_region = s:STATE_NORTH_RHINE
+						}
+					}
+				}
+				add = {
+					value = 25
+					desc = "STATE_VALUE_JE_FRENCH_NATURAL_BORDERS"
+				}
+			}
+
+			if = {
+				limit = {
+					wants_to_solve_schleswig_holstein = yes
+					scope:target_country = {
+						is_oppressor_of_schleswig_holstein = yes
+					}
+				}
+
+				if = {
+					limit = {
+						scope:target_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
+					}
+					add = {
+						value = 50
+						desc = "STATE_VALUE_SCHLESWIG_HOLSTEIN"
+					}
+				}
+				else = {
+					multiply = {
+						value = 0.0
+						desc = "STATE_VALUE_SCHLESWIG_HOLSTEIN_FOCUS"
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_the_krakow_uprising
+					country_rank >= rank_value:major_power
+					exists = c:KRA
+					scope:target_state = {
+						owner = { c:KRA ?= THIS }
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_KRAKOW_UPRISING"
+				}
+			}
+
+			if = { # Britain wants to strengthen South Africa
+				limit = {
+					any_subject_or_below = {
+						c:SAF ?= this
+					}
+					has_technology_researched = malaria_prevention
+					scope:target_state = {
+						region = sr:region_southern_africa
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_STRENGTHEN_SOUTH_AFRICA"
+				}
+			}
+
+			if = { # Spain wants to take Al Rif
+				limit = {
+					has_journal_entry = je_conquest_of_tetouan
+					scope:target_state ?= {
+						owner = {
+							is_country_type = unrecognized
+						}
+						state_region = s:STATE_AL_RIF
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_CONQUEST_OF_TETOUAN"
+				}
+			}
+
+			if = { # Portugal wants Gaza
+				limit = {
+					country_has_primary_culture = cu:portuguese
+					has_technology_researched = malaria_prevention
+					OR = {
+						has_state_in_state_region = STATE_MOCAMBIQUE
+						has_state_in_state_region = STATE_ZAMBEZIA
+						has_state_in_state_region = STATE_LOURENCO_MARQUES
+					}
+					scope:target_state = {
+						OR = {
+							state_region = s:STATE_MOCAMBIQUE
+							state_region = s:STATE_ZAMBEZIA
+							state_region = s:STATE_LOURENCO_MARQUES
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_PORTUGUESE_MOZAMBIQUE"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_struggle_for_the_highveld
+					scope:target_state = {
+						is_in_geographic_region = geographic_region_south_africa
+						owner = {
+							NOT = {
+								any_primary_culture = {
+									is_primary_culture_of = ROOT
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_HIGHVELD"
+				}
+			}
+
+			if = { # German unification
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								has_journal_entry = je_north_german_unification
+								has_journal_entry = je_german_unification
+							}
+							scope:target_country = {
+								country_has_primary_culture = cu:north_german
+								country_rank < ROOT.country_rank
+								NOT = {
+									is_in_same_power_bloc = ROOT
+								}
+							}
+						}
+						AND = {
+							OR = {
+								has_journal_entry = je_south_german_unification
+								has_journal_entry = je_german_unification
+							}
+							scope:target_country = {
+								country_has_primary_culture = cu:south_german
+								country_rank < ROOT.country_rank
+								NOT = {
+									is_in_same_power_bloc = ROOT
+								}
+							}
+						}
+					}
+				}
+				add = 50
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_risorgimento
+					scope:target_country = {
+						OR = {
+							country_has_primary_culture = cu:north_italian
+							country_has_primary_culture = cu:south_italian
+						}
+						country_rank < ROOT.country_rank
+						NOT = {
+							is_in_same_power_bloc = ROOT
+						}
+					}
+				}
+				add = 50
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_hawaiian_interest
+					scope:target_state = {
+						state_region = s:STATE_HAWAIIAN_ISLANDS
+					}
+				}
+				add = {
+					value = 50
+					desc = "STATE_VALUE_JE_HAWAII"
+				}
+			}
+
+			if = {
+				limit = {
+					lenient_ai_behavior_trigger = yes
+					scope:target_state = { is_homeland_of_country_cultures = scope:target_country }
+				}
+				multiply = {
+					value = 0.0
+					desc = "STATE_VALUE_LENIENT_BEHAVIOR"
+				}
+			}
+
+			if = {
+				limit = {
+					has_journal_entry = je_opium_wars
+					scope:target_country = {
+						has_variable = opium_wars_target
+					}
+				}
+				multiply = {
+					value = 0
+					desc = "STATE_VALUE_JE_OPIUM_WARS"
+				}
+			}
+
+			if = { #Do Not Take core Chinese States In Full, unless another power has already done so
+				limit = {
+					country_rank >= rank_value:major_power
+					scope:target_state = {
+						owner = {
+							OR = {
+								c:CHI ?= this
+								c:TPG ?= this
+							}
+						}
+						OR = {
+							region = sr:region_north_china
+							region = sr:region_south_china
+						}
+					}
+					OR = {
+						is_in_geographic_region = geographic_region_north_america
+						is_in_geographic_region = geographic_region_europe
+						is_in_geographic_region = geographic_region_south_america
+					}
+					NOR = {
+						sr:region_north_china = {
+							any_scope_state = {
+								NOT = { is_treaty_port = yes }
+								is_largest_state_in_region = yes
+								owner = {
+									NOT = { THIS = ROOT }
+									country_rank >= rank_value:major_power
+									OR = {
+										is_in_geographic_region = geographic_region_north_america
+										is_in_geographic_region = geographic_region_europe
+										is_in_geographic_region = geographic_region_south_america
+									}
+								}
+							}
+						}
+						sr:region_south_china = {
+							any_scope_state = {
+								NOT = { is_treaty_port = yes }
+								is_largest_state_in_region = yes
+								owner = {
+									NOT = { THIS = ROOT }
+									country_rank >= rank_value:major_power
+									OR = {
+										is_in_geographic_region = geographic_region_north_america
+										is_in_geographic_region = geographic_region_europe
+										is_in_geographic_region = geographic_region_south_america
+									}
+								}
+							}
+						}
+					}
+				}
+				multiply = {
+					value = 0
+					desc = "STATE_VALUE_NO_CHINESE_CORE"
+				}
+			}
+			# Russian Civil War
+			if = {
+				limit = {
+					country_has_primary_culture = cu:russian
+					has_journal_entry = je_russia_civil_war
+					scope:target_state = {
+						owner = {
+							country_has_primary_culture = cu:russian
+						}
+					}
+				}
+				add = 200
+			}
+
+			if = {
+				limit = {
+					ai_state_is_invalid_target = yes
+				}
+				multiply = {
+					value = 0
+					desc = "STATE_VALUE_INVALID_TARGET"
+				}
+			}
+
+			if = {
+				limit = {
+					has_strategic_region_interest_tier = {
+						strategic_region = scope:target_state.region
+						value <= 1
+					}
+				}
+				multiply = {
+					value = 0
+					desc = "STATE_VALUE_NOT_INTEREST_IN_REGION"
+				}
+			}
+
+			if = {
+				limit = {
+					ai_state_is_invalid_target = no
+					NOT = {
+						has_strategic_region_interest_tier = {
+							strategic_region = scope:target_state.region
+							value <= 1
+						}
+					}
+					NOT = { can_reach_target_state_to_conquer = { TARGET_STATE = scope:target_state } }
+				}
+				multiply = {
+					value = 0.1
+					desc = "STATE_VALUE_UNREACHABLE"
+				}
+			}
+		}
+
+		min = {
+			value = 0
+			desc = "STATE_VALUE_CLAMP_MIN"
+		}
+		max = {
+			value = 1000
+			desc = "STATE_VALUE_CLAMP_OWNED"
+		}
+	}
 }
