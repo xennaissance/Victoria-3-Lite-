@@ -1,0 +1,5 @@
+﻿l_english:
+ rule_pop_consolidation:0 "Pop Merge (Performance)"
+ setting_minor_consolidation_desc:0 "With Victoria 3 Lite, pops of up to 500,000 workers merge with others of the same profession in the same building. Minor merges only when a building has at least 5 such pops, and turns fewer unemployed pops into dependents."
+ setting_moderate_consolidation_desc:0 "With Victoria 3 Lite, pops of up to 500,000 workers merge with others of the same profession in the same building. Moderate merges when a building has at least 4 such pops."
+ setting_aggressive_consolidation_desc:0 "With Victoria 3 Lite, pops of up to 500,000 workers merge with others of the same profession in the same building. Aggressive merges when a building has at least 3 such pops, and turns more small unemployed pops into dependents."
