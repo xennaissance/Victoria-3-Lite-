@@ -36,12 +36,12 @@ What changes: Abrahamic is built on Catholic, Eastern on Confucian, Naturalistic
 What changes: these are built on Catholic, Sunni, Jewish, Hindu, Confucian, Animist and Atheist, so only those religions' events and journal entries still fire. For example, Protestants and Orthodox become Christian, Shiites become Islamic, and Buddhists and Sikhs become Dharmic."
   setting_vl_original_religions:0 "Original religions"
   setting_vl_original_religions_desc:0 "Pops and countries keep their historical religions, as in vanilla. More pops, so slower."
-  rule_vl_pop_merge:0 "Lite: Pop Merge"
-  rule_vl_pop_merge_desc:0 "Whether each state keeps its mix of cultures and religions, or becomes entirely its largest culture and religion. Applied when a new game starts, after the Pop Cultures and Pop Religions rules. Has no effect on saved games."
-  setting_vl_pop_merge_off:0 "Off"
-  setting_vl_pop_merge_off_desc:0 "States keep their mix of cultures and religions."
-  setting_vl_pop_merge_on:0 "On (faster)"
-  setting_vl_pop_merge_on_desc:0 "Every pop in a state takes that state's largest culture and largest religion, so each state has exactly one of each.
+  rule_vl_pop_consolidation:0 "Lite: Pop Consolidation"
+  rule_vl_pop_consolidation_desc:0 "Whether each state keeps its mix of cultures and religions, or becomes entirely its largest culture and religion. Applied when a new game starts, after the Pop Cultures and Pop Religions rules. Has no effect on saved games."
+  setting_vl_consolidation_off:0 "Off"
+  setting_vl_consolidation_off_desc:0 "States keep their mix of cultures and religions."
+  setting_vl_consolidation_on:0 "On (faster)"
+  setting_vl_consolidation_on_desc:0 "Every pop in a state takes that state's largest culture and largest religion, so each state has exactly one of each.
 
 What changes: minorities disappear within each state. Countries keep their primary cultures and state religions, so a state whose majority is not the country's culture becomes entirely that other culture, which can raise discrimination and unrest in mixed empires. On by default, so you still get much of the speed-up if you set cultures or religions back to Original."
   rule_vl_costly_alerts:0 "Lite: Costly Alerts"
