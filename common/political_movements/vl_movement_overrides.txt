@@ -2466,6 +2466,9 @@ REPLACE:movement_pro_slavery = {
 	}
 
 	additional_radicalism_factors = {
+		if = { # Victoria 3 Lite: extra radicalism factors only in major powers and player countries
+			limit = { owner ?= { OR = { is_player = yes country_rank >= rank_value:unrecognized_major_power } } }
+
 		if = {
 			limit = {
 				owner.ruler ?= {
@@ -2564,5 +2567,6 @@ REPLACE:movement_pro_slavery = {
 			}
 		}
 		add = movement_radicalism_suppressed_after_civil_war
+			}
 	}
 }
