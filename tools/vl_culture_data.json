@@ -1,0 +1,2050 @@
+{
+"cultures": {
+"north_german": {
+"heritage": "heritage_germanic",
+"group": "heritage_group_european",
+"refs": 98,
+"name": "North German"
+},
+"south_german": {
+"heritage": "heritage_germanic",
+"group": "heritage_group_european",
+"refs": 126,
+"name": "South German"
+},
+"ashkenazi": {
+"heritage": "heritage_ashkenazi",
+"group": "heritage_group_european",
+"refs": 8,
+"name": "Ashkenazi"
+},
+"dutch": {
+"heritage": "heritage_netherlandish",
+"group": "heritage_group_european",
+"refs": 5,
+"name": "Dutch"
+},
+"flemish": {
+"heritage": "heritage_netherlandish",
+"group": "heritage_group_european",
+"refs": 3,
+"name": "Flemish"
+},
+"wallonian": {
+"heritage": "heritage_netherlandish",
+"group": "heritage_group_european",
+"refs": 10,
+"name": "Wallonian"
+},
+"boer": {
+"heritage": "heritage_african_settler",
+"group": "heritage_group_european",
+"refs": 8,
+"name": "Boer"
+},
+"griqua": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 8,
+"name": "Griqua"
+},
+"alemannic": {
+"heritage": "heritage_germanic",
+"group": "heritage_group_european",
+"refs": 1,
+"name": "Alemannic"
+},
+"swedish": {
+"heritage": "heritage_nordic",
+"group": "heritage_group_european",
+"refs": 6,
+"name": "Swedish"
+},
+"danish": {
+"heritage": "heritage_nordic",
+"group": "heritage_group_european",
+"refs": 4,
+"name": "Danish"
+},
+"norwegian": {
+"heritage": "heritage_nordic",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "Norwegian"
+},
+"icelandic": {
+"heritage": "heritage_nordic",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "Icelandic"
+},
+"finnish": {
+"heritage": "heritage_nordic",
+"group": "heritage_group_european",
+"refs": 17,
+"name": "Finnish"
+},
+"sami": {
+"heritage": "heritage_sami",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "S\u00e1mi"
+},
+"british": {
+"heritage": "heritage_british",
+"group": "heritage_group_european",
+"refs": 52,
+"name": "English"
+},
+"irish": {
+"heritage": "heritage_british",
+"group": "heritage_group_european",
+"refs": 16,
+"name": "Irish"
+},
+"australian": {
+"heritage": "heritage_british",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "Australian"
+},
+"north_italian": {
+"heritage": "heritage_italic",
+"group": "heritage_group_european",
+"refs": 77,
+"name": "North Italian"
+},
+"south_italian": {
+"heritage": "heritage_italic",
+"group": "heritage_group_european",
+"refs": 40,
+"name": "South Italian"
+},
+"maltese": {
+"heritage": "heritage_italic",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Maltese"
+},
+"basque": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 13,
+"name": "Basque"
+},
+"spanish": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 58,
+"name": "Spanish"
+},
+"catalan": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 19,
+"name": "Catalan"
+},
+"portuguese": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 9,
+"name": "Portuguese"
+},
+"french": {
+"heritage": "heritage_gallic",
+"group": "heritage_group_european",
+"refs": 176,
+"name": "French"
+},
+"occitan": {
+"heritage": "heritage_gallic",
+"group": "heritage_group_european",
+"refs": 26,
+"name": "Occitan"
+},
+"breton": {
+"heritage": "heritage_gallic",
+"group": "heritage_group_european",
+"refs": 26,
+"name": "Breton"
+},
+"croat": {
+"heritage": "heritage_south_slavic",
+"group": "heritage_group_european",
+"refs": 100,
+"name": "Croatian"
+},
+"serb": {
+"heritage": "heritage_south_slavic",
+"group": "heritage_group_european",
+"refs": 83,
+"name": "Serbian"
+},
+"bulgarian": {
+"heritage": "heritage_south_slavic",
+"group": "heritage_group_european",
+"refs": 27,
+"name": "Bulgarian"
+},
+"albanian": {
+"heritage": "heritage_albanian",
+"group": "heritage_group_european",
+"refs": 14,
+"name": "Albanian"
+},
+"slovene": {
+"heritage": "heritage_south_slavic",
+"group": "heritage_group_european",
+"refs": 63,
+"name": "Slovene"
+},
+"bosniak": {
+"heritage": "heritage_south_slavic",
+"group": "heritage_group_european",
+"refs": 26,
+"name": "Bosniak"
+},
+"romanian": {
+"heritage": "heritage_romanian",
+"group": "heritage_group_european",
+"refs": 71,
+"name": "Romanian"
+},
+"hungarian": {
+"heritage": "heritage_magyar",
+"group": "heritage_group_european",
+"refs": 105,
+"name": "Hungarian"
+},
+"polish": {
+"heritage": "heritage_west_slavic",
+"group": "heritage_group_european",
+"refs": 151,
+"name": "Polish"
+},
+"lithuanian": {
+"heritage": "heritage_baltic",
+"group": "heritage_group_european",
+"refs": 24,
+"name": "Lithuanian"
+},
+"czech": {
+"heritage": "heritage_west_slavic",
+"group": "heritage_group_european",
+"refs": 36,
+"name": "Czech"
+},
+"slovak": {
+"heritage": "heritage_west_slavic",
+"group": "heritage_group_european",
+"refs": 41,
+"name": "Slovak"
+},
+"russian": {
+"heritage": "heritage_east_slavic",
+"group": "heritage_group_european",
+"refs": 97,
+"name": "Russian"
+},
+"byelorussian": {
+"heritage": "heritage_east_slavic",
+"group": "heritage_group_european",
+"refs": 55,
+"name": "Byelorussian"
+},
+"ukrainian": {
+"heritage": "heritage_east_slavic",
+"group": "heritage_group_european",
+"refs": 133,
+"name": "Ukrainian"
+},
+"ugrian": {
+"heritage": "heritage_siberian",
+"group": "heritage_group_north_asian",
+"refs": 2,
+"name": "Ugrian"
+},
+"latvian": {
+"heritage": "heritage_baltic",
+"group": "heritage_group_european",
+"refs": 21,
+"name": "Latvian"
+},
+"estonian": {
+"heritage": "heritage_baltic",
+"group": "heritage_group_european",
+"refs": 18,
+"name": "Estonian"
+},
+"greek": {
+"heritage": "heritage_greek",
+"group": "heritage_group_european",
+"refs": 47,
+"name": "Greek"
+},
+"georgian": {
+"heritage": "heritage_georgian",
+"group": "heritage_group_european",
+"refs": 18,
+"name": "Georgian"
+},
+"armenian": {
+"heritage": "heritage_armenian",
+"group": "heritage_group_european",
+"refs": 14,
+"name": "Armenian"
+},
+"sephardic": {
+"heritage": "heritage_sephardic",
+"group": "heritage_group_middle_eastern",
+"refs": 14,
+"name": "Sephardi"
+},
+"turkish": {
+"heritage": "heritage_anatolian",
+"group": "heritage_group_middle_eastern",
+"refs": 19,
+"name": "Turkish"
+},
+"azerbaijani": {
+"heritage": "heritage_anatolian",
+"group": "heritage_group_middle_eastern",
+"refs": 10,
+"name": "Azerbaijani"
+},
+"dagestani": {
+"heritage": "heritage_north_caucasian",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "Dagestani"
+},
+"ossetian": {
+"heritage": "heritage_north_caucasian",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "Ossetian"
+},
+"abkhazian": {
+"heritage": "heritage_north_caucasian",
+"group": "heritage_group_european",
+"refs": 4,
+"name": "Abkhazian"
+},
+"caucasian_turk": {
+"heritage": "heritage_north_caucasian",
+"group": "heritage_group_european",
+"refs": 6,
+"name": "Caucasian Turk"
+},
+"maghrebi": {
+"heritage": "heritage_arab",
+"group": "heritage_group_middle_eastern",
+"refs": 19,
+"name": "Maghrebi"
+},
+"misri": {
+"heritage": "heritage_arab",
+"group": "heritage_group_middle_eastern",
+"refs": 8,
+"name": "Misri"
+},
+"mashriqi": {
+"heritage": "heritage_arab",
+"group": "heritage_group_middle_eastern",
+"refs": 5,
+"name": "Mashriqi"
+},
+"bedouin": {
+"heritage": "heritage_arab",
+"group": "heritage_group_middle_eastern",
+"refs": 10,
+"name": "Bedouin"
+},
+"berber": {
+"heritage": "heritage_berber",
+"group": "heritage_group_middle_eastern",
+"refs": 20,
+"name": "Amazigh"
+},
+"persian": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 18,
+"name": "Persian"
+},
+"uzbek": {
+"heritage": "heritage_uzbek",
+"group": "heritage_group_central_asian",
+"refs": 18,
+"name": "Uzbek"
+},
+"kazak": {
+"heritage": "heritage_kipchak",
+"group": "heritage_group_central_asian",
+"refs": 26,
+"name": "Kazakh"
+},
+"kirgiz": {
+"heritage": "heritage_kipchak",
+"group": "heritage_group_central_asian",
+"refs": 7,
+"name": "Kyrgyz"
+},
+"tajik": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 18,
+"name": "Tajik"
+},
+"uighur": {
+"heritage": "heritage_uighur",
+"group": "heritage_group_central_asian",
+"refs": 8,
+"name": "Uighur"
+},
+"pashtun": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 34,
+"name": "Pashtun"
+},
+"baluchi": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 2,
+"name": "Baluchi"
+},
+"hazara": {
+"heritage": "heritage_hazaran",
+"group": "heritage_group_central_asian",
+"refs": 0,
+"name": "Hazara"
+},
+"turkmen": {
+"heritage": "heritage_turkmen",
+"group": "heritage_group_central_asian",
+"refs": 19,
+"name": "Turkmen"
+},
+"kurdish": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 2,
+"name": "Kurdish"
+},
+"tatar": {
+"heritage": "heritage_tatar",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Tatar"
+},
+"crimean_tatar": {
+"heritage": "heritage_tatar",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Crimean Tatar"
+},
+"mongol": {
+"heritage": "heritage_mongolian",
+"group": "heritage_group_north_asian",
+"refs": 2,
+"name": "Mongol"
+},
+"kalmyk": {
+"heritage": "heritage_mongolian",
+"group": "heritage_group_north_asian",
+"refs": 7,
+"name": "Kalmyk"
+},
+"evenki": {
+"heritage": "heritage_siberian",
+"group": "heritage_group_north_asian",
+"refs": 1,
+"name": "Evenki"
+},
+"chukchi": {
+"heritage": "heritage_siberian",
+"group": "heritage_group_north_asian",
+"refs": 1,
+"name": "Chukchi"
+},
+"yakut": {
+"heritage": "heritage_siberian",
+"group": "heritage_group_north_asian",
+"refs": 1,
+"name": "Yakut"
+},
+"tibetan": {
+"heritage": "heritage_tibetan",
+"group": "heritage_group_east_asian",
+"refs": 2,
+"name": "Tibetan"
+},
+"assamese": {
+"heritage": "heritage_assamese",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Assamese"
+},
+"bihari": {
+"heritage": "heritage_gangetic",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Bihari"
+},
+"manipuri": {
+"heritage": "heritage_eastern_highlands",
+"group": "heritage_group_southeast_asian",
+"refs": 2,
+"name": "Manipuri"
+},
+"nepali": {
+"heritage": "heritage_himalayan",
+"group": "heritage_group_south_asian",
+"refs": 1,
+"name": "Nepali"
+},
+"oriya": {
+"heritage": "heritage_gangetic",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Oria"
+},
+"sinhala": {
+"heritage": "heritage_insular",
+"group": "heritage_group_south_asian",
+"refs": 3,
+"name": "Sinhala"
+},
+"avadhi": {
+"heritage": "heritage_gangetic",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Avadhi"
+},
+"panjabi": {
+"heritage": "heritage_indusine",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Punjabi"
+},
+"kashmiri": {
+"heritage": "heritage_kashmiri",
+"group": "heritage_group_south_asian",
+"refs": 2,
+"name": "Kashmiri"
+},
+"sindi": {
+"heritage": "heritage_indusine",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Sindi"
+},
+"rajput": {
+"heritage": "heritage_rajasthani",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Rajput"
+},
+"kannada": {
+"heritage": "heritage_deccani",
+"group": "heritage_group_south_asian",
+"refs": 6,
+"name": "Kannada"
+},
+"malayalam": {
+"heritage": "heritage_carnatic",
+"group": "heritage_group_south_asian",
+"refs": 5,
+"name": "Malayalam"
+},
+"telegu": {
+"heritage": "heritage_deccani",
+"group": "heritage_group_south_asian",
+"refs": 4,
+"name": "Telugu"
+},
+"vietnamese": {
+"heritage": "heritage_vietnamese",
+"group": "heritage_group_southeast_asian",
+"refs": 8,
+"name": "Vietnamese"
+},
+"khmer": {
+"heritage": "heritage_cambodian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Khmer"
+},
+"batak": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Batak"
+},
+"dayak": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Dayak"
+},
+"malagasy": {
+"heritage": "heritage_east_african",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Malagasy"
+},
+"filipino": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 9,
+"name": "Pilipino"
+},
+"filipino_hispanophone": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 9,
+"name": "Filipino"
+},
+"filipino_mestizo": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 20,
+"name": "Filipino Mestizo"
+},
+"tagalog": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 5,
+"name": "Tagalog"
+},
+"visayan": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 5,
+"name": "Visayan"
+},
+"ilocano": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 5,
+"name": "Ilocano"
+},
+"lumad": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Lumad"
+},
+"moro": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Moro"
+},
+"javan": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 3,
+"name": "Javan"
+},
+"moluccan": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Moluccan"
+},
+"thai": {
+"heritage": "heritage_tai",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Thai"
+},
+"mon": {
+"heritage": "heritage_burmese",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Mon"
+},
+"khmu": {
+"heritage": "heritage_khmu",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Khmu"
+},
+"lao": {
+"heritage": "heritage_tai",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Lao"
+},
+"shan": {
+"heritage": "heritage_tai",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Shan"
+},
+"burmese": {
+"heritage": "heritage_burmese",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Burmese"
+},
+"kachin": {
+"heritage": "heritage_burmese",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Kachin"
+},
+"karen": {
+"heritage": "heritage_burmese",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Karen"
+},
+"japanese": {
+"heritage": "heritage_japanese",
+"group": "heritage_group_east_asian",
+"refs": 77,
+"name": "Japanese"
+},
+"manchu": {
+"heritage": "heritage_manchu",
+"group": "heritage_group_north_asian",
+"refs": 34,
+"name": "Manchu"
+},
+"han": {
+"heritage": "heritage_han",
+"group": "heritage_group_east_asian",
+"refs": 36,
+"name": "Han"
+},
+"korean": {
+"heritage": "heritage_korean",
+"group": "heritage_group_east_asian",
+"refs": 15,
+"name": "Korean"
+},
+"ainu": {
+"heritage": "heritage_ainu",
+"group": "heritage_group_north_asian",
+"refs": 10,
+"name": "Ainu"
+},
+"hakka": {
+"heritage": "heritage_han",
+"group": "heritage_group_east_asian",
+"refs": 6,
+"name": "Hakka"
+},
+"miao": {
+"heritage": "heritage_miao",
+"group": "heritage_group_east_asian",
+"refs": 0,
+"name": "Miao"
+},
+"min": {
+"heritage": "heritage_han",
+"group": "heritage_group_east_asian",
+"refs": 0,
+"name": "Min"
+},
+"zhuang": {
+"heritage": "heritage_tai",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Zhuang"
+},
+"yi": {
+"heritage": "heritage_yi",
+"group": "heritage_group_east_asian",
+"refs": 3,
+"name": "Yi"
+},
+"yue": {
+"heritage": "heritage_han",
+"group": "heritage_group_east_asian",
+"refs": 0,
+"name": "Yue"
+},
+"polynesian": {
+"heritage": "heritage_polynesian",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 0,
+"name": "Polynesian"
+},
+"hawaiian": {
+"heritage": "heritage_polynesian",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 2,
+"name": "Hawaiian"
+},
+"melanesian": {
+"heritage": "heritage_melanesian",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 0,
+"name": "Melanesian"
+},
+"micronesian": {
+"heritage": "heritage_micronesian",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 0,
+"name": "Micronesian"
+},
+"maori": {
+"heritage": "heritage_polynesian",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 0,
+"name": "M\u0101ori"
+},
+"yuanzhumin": {
+"heritage": "heritage_formosan",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 0,
+"name": "Yuanzhumin"
+},
+"aborigine": {
+"heritage": "heritage_australian",
+"group": "heritage_group_indigenous_oceanic",
+"refs": 0,
+"name": "Aboriginal"
+},
+"zapotec": {
+"heritage": "heritage_mesoamerican",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Zapotec"
+},
+"mayan": {
+"heritage": "heritage_mesoamerican",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Maya"
+},
+"nahua": {
+"heritage": "heritage_mesoamerican",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Nahua"
+},
+"tarascan": {
+"heritage": "heritage_mesoamerican",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Tarascan"
+},
+"quechua": {
+"heritage": "heritage_andean",
+"group": "heritage_group_indigenous_american",
+"refs": 4,
+"name": "Quechua"
+},
+"guarani": {
+"heritage": "heritage_guarani",
+"group": "heritage_group_indigenous_american",
+"refs": 2,
+"name": "Guarani"
+},
+"aimara": {
+"heritage": "heritage_andean",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Aimara"
+},
+"amazonian": {
+"heritage": "heritage_amazonian",
+"group": "heritage_group_indigenous_american",
+"refs": 7,
+"name": "Amazonian"
+},
+"patagonian": {
+"heritage": "heritage_patagonian",
+"group": "heritage_group_indigenous_american",
+"refs": 3,
+"name": "Patagonian"
+},
+"guajiro": {
+"heritage": "heritage_caribbean",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Guajiro"
+},
+"tupinamba": {
+"heritage": "heritage_atlantic",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Tupinamba"
+},
+"metis": {
+"heritage": "heritage_subarctic_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "M\u00e9tis"
+},
+"dakota": {
+"heritage": "heritage_subarctic_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Dakota"
+},
+"cherokee": {
+"heritage": "heritage_subarctic_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 18,
+"name": "Cherokee"
+},
+"muskogean": {
+"heritage": "heritage_subarctic_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 4,
+"name": "Muskogean"
+},
+"pueblo": {
+"heritage": "heritage_southwest_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Pueblo"
+},
+"inuit": {
+"heritage": "heritage_circumpolar",
+"group": "heritage_group_indigenous_american",
+"refs": 1,
+"name": "Inuit"
+},
+"cree": {
+"heritage": "heritage_subarctic_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Cree"
+},
+"navajo": {
+"heritage": "heritage_southwest_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Navajo"
+},
+"athabaskan": {
+"heritage": "heritage_circumpolar",
+"group": "heritage_group_indigenous_american",
+"refs": 2,
+"name": "Athabaskan"
+},
+"salish": {
+"heritage": "heritage_northwest_coast_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Salish"
+},
+"nez_perce": {
+"heritage": "heritage_plateau_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Nez Perce"
+},
+"siouan": {
+"heritage": "heritage_plains_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Siouan"
+},
+"comanche": {
+"heritage": "heritage_plains_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Comanche"
+},
+"algonquian": {
+"heritage": "heritage_eastern_woodlands_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Algonquian"
+},
+"iroquoian": {
+"heritage": "heritage_eastern_woodlands_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Iroquoian"
+},
+"caddoan": {
+"heritage": "heritage_plains_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Caddoan"
+},
+"paiute": {
+"heritage": "heritage_great_basin_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Paiute"
+},
+"hokan": {
+"heritage": "heritage_californian_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Hokan"
+},
+"apache": {
+"heritage": "heritage_plains_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Apache"
+},
+"oodham": {
+"heritage": "heritage_eastern_woodlands_indian",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "O\u2019odham"
+},
+"mixtec": {
+"heritage": "heritage_mesoamerican",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Mixtec"
+},
+"muisca": {
+"heritage": "heritage_andean",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Muisca"
+},
+"miskito": {
+"heritage": "heritage_caribbean",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Miskito"
+},
+"cariban": {
+"heritage": "heritage_caribbean",
+"group": "heritage_group_indigenous_american",
+"refs": 0,
+"name": "Cariban"
+},
+"yankee": {
+"heritage": "heritage_north_american_settler",
+"group": "heritage_group_european",
+"refs": 58,
+"name": "Yankee"
+},
+"dixie": {
+"heritage": "heritage_north_american_settler",
+"group": "heritage_group_european",
+"refs": 70,
+"name": "Dixie"
+},
+"mexican": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 2,
+"name": "Mexican"
+},
+"central_american": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 4,
+"name": "Central American"
+},
+"caribeno": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 13,
+"name": "Caribe\u00f1o"
+},
+"north_andean": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 46,
+"name": "North Andean"
+},
+"south_andean": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 61,
+"name": "South Andean"
+},
+"peruvian": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 27,
+"name": "Peruvian"
+},
+"bolivian": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 17,
+"name": "Bolivian"
+},
+"ecuadorian": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 20,
+"name": "Ecuadorian"
+},
+"chilean": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 20,
+"name": "Chilean"
+},
+"venezuelan": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 20,
+"name": "Venezuelan"
+},
+"argentine": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 21,
+"name": "Argentine"
+},
+"uruguayan": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 18,
+"name": "Uruguayan"
+},
+"paraguayan": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 18,
+"name": "Paraguayan"
+},
+"colombian": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 18,
+"name": "Colombian"
+},
+"platinean": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 44,
+"name": "Platinean"
+},
+"brazilian": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 21,
+"name": "Brazilian"
+},
+"sulista": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 9,
+"name": "Sulista"
+},
+"nordestino": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 7,
+"name": "Nordestino"
+},
+"amazonic": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 8,
+"name": "Amazonic"
+},
+"paulista": {
+"heritage": "heritage_latin_american_settler",
+"group": "heritage_group_european",
+"refs": 7,
+"name": "Paulista"
+},
+"afro_american": {
+"heritage": "heritage_african_diaspora",
+"group": "heritage_group_african",
+"refs": 52,
+"name": "Afro-American"
+},
+"afro_caribbean": {
+"heritage": "heritage_african_diaspora",
+"group": "heritage_group_african",
+"refs": 3,
+"name": "Afro-Caribbean"
+},
+"afro_caribeno": {
+"heritage": "heritage_african_diaspora",
+"group": "heritage_group_african",
+"refs": 19,
+"name": "Afro-Caribe\u00f1o"
+},
+"afro_brazilian": {
+"heritage": "heritage_african_diaspora",
+"group": "heritage_group_african",
+"refs": 9,
+"name": "Afro-Brazilian"
+},
+"afro_antillean": {
+"heritage": "heritage_african_diaspora",
+"group": "heritage_group_african",
+"refs": 7,
+"name": "Afro-Antillean"
+},
+"akan": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Akan"
+},
+"bambara": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Bambara"
+},
+"bassa": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Bassa"
+},
+"dyula": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Dyula"
+},
+"edo": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Edo"
+},
+"ewe": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Ewe"
+},
+"fon": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Fon"
+},
+"fulbe": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Fulbe"
+},
+"haratin": {
+"heritage": "heritage_afro_arab",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Haratin"
+},
+"hausa": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Hausa"
+},
+"ibibio": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Ibibio"
+},
+"ibo": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Ibo"
+},
+"kissi": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Kissi"
+},
+"kru": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Kru"
+},
+"mande": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Mande"
+},
+"bidan": {
+"heritage": "heritage_berber",
+"group": "heritage_group_middle_eastern",
+"refs": 2,
+"name": "Bidan"
+},
+"mossi": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Mossi"
+},
+"senufo": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Senufo"
+},
+"songhai": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Songhai"
+},
+"tiv": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Tiv"
+},
+"tuareg": {
+"heritage": "heritage_berber",
+"group": "heritage_group_middle_eastern",
+"refs": 0,
+"name": "Tuareg"
+},
+"wolof": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Wolof"
+},
+"yoruba": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Yoruba"
+},
+"bakongo": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Bakongo"
+},
+"baguirmi": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Baguirmi"
+},
+"fang": {
+"heritage": "heritage_guinean",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Fang"
+},
+"kanuri": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Kanuri"
+},
+"luba": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Luba"
+},
+"lunda": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Lunda"
+},
+"mongo": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Mongo"
+},
+"sara": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Sara"
+},
+"teda": {
+"heritage": "heritage_sahelian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Tubu"
+},
+"equatorial_bantu": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Equatorial Bantu"
+},
+"fluvian_bantu": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Fluvial Bantu"
+},
+"nilotic": {
+"heritage": "heritage_nilotic",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Nilotic"
+},
+"amhara": {
+"heritage": "heritage_abyssinian",
+"group": "heritage_group_african",
+"refs": 3,
+"name": "Amhara"
+},
+"afar": {
+"heritage": "heritage_abyssinian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Afar"
+},
+"azande": {
+"heritage": "heritage_congolese",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Azande"
+},
+"baganda": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Baganda"
+},
+"beja": {
+"heritage": "heritage_abyssinian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Beja"
+},
+"dinka": {
+"heritage": "heritage_nilotic",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Dinka"
+},
+"fur": {
+"heritage": "heritage_darfurian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Fur"
+},
+"kikuyu": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Kikuyu"
+},
+"luo": {
+"heritage": "heritage_nilotic",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Luo"
+},
+"maasai": {
+"heritage": "heritage_nilotic",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Maasai"
+},
+"nuer": {
+"heritage": "heritage_nilotic",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Nuer"
+},
+"nuba": {
+"heritage": "heritage_kordofanian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Nuba"
+},
+"oromo": {
+"heritage": "heritage_abyssinian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Oromo"
+},
+"ruanda": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Ruanda"
+},
+"rundi": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Rundi"
+},
+"sidama": {
+"heritage": "heritage_abyssinian",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Sidama"
+},
+"somali": {
+"heritage": "heritage_somali",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Somali"
+},
+"sudanese": {
+"heritage": "heritage_afro_arab",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Sudanese"
+},
+"sukuma": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Sukuma"
+},
+"swahili": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 14,
+"name": "Swahili"
+},
+"tigray": {
+"heritage": "heritage_abyssinian",
+"group": "heritage_group_african",
+"refs": 1,
+"name": "Tigray"
+},
+"nyamwezi": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Nyamwezi"
+},
+"lacustrine_bantu": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Lacustrine Bantu"
+},
+"chewa": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Chewa"
+},
+"herero": {
+"heritage": "heritage_southwest_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Herero"
+},
+"khoisan": {
+"heritage": "heritage_khoisan",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Khoisan"
+},
+"lomwe": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Lomwe"
+},
+"makua": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Makua"
+},
+"nguni": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Nguni"
+},
+"ovimbundu": {
+"heritage": "heritage_southwest_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Ovimbundu"
+},
+"sena": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Sena"
+},
+"shona": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Shona"
+},
+"sotho": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Sotho"
+},
+"tonga": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Tonga"
+},
+"tswana": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Tswana"
+},
+"xhosa": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Xhosa"
+},
+"yao": {
+"heritage": "heritage_eastern_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Yao"
+},
+"zulu": {
+"heritage": "heritage_southern_bantu",
+"group": "heritage_group_african",
+"refs": 3,
+"name": "Zulu"
+},
+"kavango_bantu": {
+"heritage": "heritage_southwest_bantu",
+"group": "heritage_group_african",
+"refs": 0,
+"name": "Kavango Bantu"
+},
+"anglo_canadian": {
+"heritage": "heritage_north_american_settler",
+"group": "heritage_group_european",
+"refs": 21,
+"name": "Anglo-Canadian"
+},
+"franco_canadian": {
+"heritage": "heritage_north_american_settler",
+"group": "heritage_group_european",
+"refs": 20,
+"name": "Franco-Canadian"
+},
+"sorb": {
+"heritage": "heritage_west_slavic",
+"group": "heritage_group_european",
+"refs": 3,
+"name": "Sorb"
+},
+"tuvan": {
+"heritage": "heritage_siberian",
+"group": "heritage_group_north_asian",
+"refs": 1,
+"name": "Tuvan"
+},
+"corsican": {
+"heritage": "heritage_italic",
+"group": "heritage_group_european",
+"refs": 3,
+"name": "Corsican"
+},
+"yemenite": {
+"heritage": "heritage_arab",
+"group": "heritage_group_middle_eastern",
+"refs": 3,
+"name": "Yemenite"
+},
+"szekely": {
+"heritage": "heritage_magyar",
+"group": "heritage_group_european",
+"refs": 22,
+"name": "Szekler"
+},
+"hindustani": {
+"heritage": "heritage_gangetic",
+"group": "heritage_group_south_asian",
+"refs": 2,
+"name": "Hindustani"
+},
+"lushai": {
+"heritage": "heritage_eastern_highlands",
+"group": "heritage_group_southeast_asian",
+"refs": 2,
+"name": "Lushai"
+},
+"bundeli": {
+"heritage": "heritage_central",
+"group": "heritage_group_south_asian",
+"refs": 3,
+"name": "Bundeli"
+},
+"pahari": {
+"heritage": "heritage_himalayan",
+"group": "heritage_group_south_asian",
+"refs": 3,
+"name": "Pahari"
+},
+"gondi": {
+"heritage": "heritage_central",
+"group": "heritage_group_south_asian",
+"refs": 2,
+"name": "Gondi"
+},
+"bageli": {
+"heritage": "heritage_central",
+"group": "heritage_group_south_asian",
+"refs": 3,
+"name": "Bagheli"
+},
+"chhattisgarhi": {
+"heritage": "heritage_central",
+"group": "heritage_group_south_asian",
+"refs": 2,
+"name": "Chhattisgarhi"
+},
+"naga": {
+"heritage": "heritage_eastern_highlands",
+"group": "heritage_group_southeast_asian",
+"refs": 2,
+"name": "Naga"
+},
+"deccani": {
+"heritage": "heritage_deccani",
+"group": "heritage_group_south_asian",
+"refs": 2,
+"name": "Deccani"
+},
+"gujarati": {
+"heritage": "heritage_gujarati",
+"group": "heritage_group_south_asian",
+"refs": 4,
+"name": "Gujarati"
+},
+"tamil": {
+"heritage": "heritage_carnatic",
+"group": "heritage_group_south_asian",
+"refs": 6,
+"name": "Tamil"
+},
+"bengali": {
+"heritage": "heritage_gangetic",
+"group": "heritage_group_south_asian",
+"refs": 7,
+"name": "Bengali"
+},
+"marathi": {
+"heritage": "heritage_deccani",
+"group": "heritage_group_south_asian",
+"refs": 8,
+"name": "Marathi"
+},
+"pathan": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 3,
+"name": "Pathan"
+},
+"welsh": {
+"heritage": "heritage_british",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Welsh"
+},
+"scottish_gaelic": {
+"heritage": "heritage_british",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Gael"
+},
+"scottish": {
+"heritage": "heritage_british",
+"group": "heritage_group_european",
+"refs": 17,
+"name": "Scottish"
+},
+"galician": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 17,
+"name": "Galician"
+},
+"malay": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Malay"
+},
+"bornean": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Bornean"
+},
+"sumatran": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Sumatran"
+},
+"balinese": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 1,
+"name": "Balinese"
+},
+"cajun": {
+"heritage": "heritage_north_american_settler",
+"group": "heritage_group_european",
+"refs": 1,
+"name": "Cajun"
+},
+"assyrian": {
+"heritage": "heritage_syriac",
+"group": "heritage_group_middle_eastern",
+"refs": 2,
+"name": "Assyrian"
+},
+"circassian": {
+"heritage": "heritage_north_caucasian",
+"group": "heritage_group_european",
+"refs": 40,
+"name": "Circassian"
+},
+"francoprovencal": {
+"heritage": "heritage_gallic",
+"group": "heritage_group_european",
+"refs": 10,
+"name": "Franco-Proven\u00e7al"
+},
+"chechen": {
+"heritage": "heritage_north_caucasian",
+"group": "heritage_group_european",
+"refs": 4,
+"name": "Chechen"
+},
+"karelian": {
+"heritage": "heritage_nordic",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Karelian"
+},
+"bashkir": {
+"heritage": "heritage_tatar",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Bashkir"
+},
+"buryat": {
+"heritage": "heritage_mongolian",
+"group": "heritage_group_north_asian",
+"refs": 0,
+"name": "Buryat"
+},
+"mordvin": {
+"heritage": "heritage_volga_uralic",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Mordvin"
+},
+"chuvash": {
+"heritage": "heritage_tatar",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Chuvash"
+},
+"mari": {
+"heritage": "heritage_volga_uralic",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Mari"
+},
+"udmurt": {
+"heritage": "heritage_volga_uralic",
+"group": "heritage_group_european",
+"refs": 0,
+"name": "Udmurt"
+},
+"mazanderani": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 0,
+"name": "Mazanderani"
+},
+"luri": {
+"heritage": "heritage_iranian",
+"group": "heritage_group_middle_eastern",
+"refs": 0,
+"name": "Luri"
+},
+"kho": {
+"heritage": "heritage_kashmiri",
+"group": "heritage_group_south_asian",
+"refs": 3,
+"name": "Chitrali"
+},
+"champa": {
+"heritage": "heritage_insulindian",
+"group": "heritage_group_southeast_asian",
+"refs": 0,
+"name": "Champa"
+},
+"east_german": {
+"heritage": "heritage_germanic",
+"group": "heritage_group_european",
+"refs": 7,
+"name": "Eastern German"
+},
+"promethean": {
+"heritage": "heritage_promethean",
+"group": "heritage_group_promethean",
+"refs": 9,
+"name": "Promethean"
+},
+"asturleonese": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 15,
+"name": "Asturleonese"
+},
+"aragonese": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 8,
+"name": "Aragonese"
+},
+"iberian": {
+"heritage": "heritage_iberian",
+"group": "heritage_group_european",
+"refs": 10,
+"name": "Iberian"
+},
+"ryukyuan": {
+"heritage": "heritage_japanese",
+"group": "heritage_group_east_asian",
+"refs": 4,
+"name": "Ryukyuan"
+}
+},
+"names": {
+"heritage_kipchak": "Kipchak",
+"heritage_east_slavic": "East Slavic",
+"heritage_sephardic": "Sephardic",
+"heritage_guinean": "Guinean",
+"heritage_central": "Central",
+"heritage_uighur": "Uighur",
+"heritage_group_east_asian": "East Asian",
+"heritage_kordofanian": "Kordofanian",
+"heritage_southern_bantu": "Southern Bantu",
+"heritage_north_caucasian": "North Caucasian",
+"heritage_ainu": "Ainu",
+"heritage_burmese": "Burmese",
+"heritage_eastern_bantu": "Eastern Bantu",
+"heritage_miao": "Miao",
+"heritage_insular": "Insular",
+"heritage_west_slavic": "West Slavic",
+"heritage_gangetic": "Gangetic",
+"heritage_nilotic": "Nilotic",
+"heritage_group_promethean": "Promethean",
+"heritage_khmu": "Khmu",
+"heritage_amazonian": "Amazonian",
+"heritage_korean": "Korean",
+"heritage_volga_uralic": "Volga-Uralic",
+"heritage_group_indigenous_oceanic": "Indigenous Oceanic",
+"heritage_mesoamerican": "Mesoamerican",
+"heritage_polynesian": "Polynesian",
+"heritage_darfurian": "Darfurian",
+"heritage_yi": "Yi",
+"heritage_group_european": "European",
+"heritage_himalayan": "Himalayan",
+"heritage_subarctic_indian": "Subarctic Indian",
+"heritage_khoisan": "Khoisan",
+"heritage_carnatic": "Carnatic",
+"heritage_plains_indian": "Plains Indian",
+"heritage_guarani": "Guarani",
+"heritage_tibetan": "Tibetan",
+"heritage_somali": "Somali",
+"heritage_hazaran": "Hazaran",
+"heritage_eastern_highlands": "Eastern Highlands",
+"heritage_micronesian": "Micronesian",
+"heritage_latin_american_settler": "Latin American Settler",
+"heritage_group_african": "African",
+"heritage_siberian": "Siberian",
+"heritage_kashmiri": "Kashmiri",
+"heritage_afro_arab": "Afro-Arab",
+"heritage_east_african": "East African",
+"heritage_group_indigenous_american": "Indigenous American",
+"heritage_assamese": "Assamese",
+"heritage_iranian": "Iranian",
+"heritage_romanian": "Romanian",
+"heritage_rajasthani": "Rajasthani",
+"heritage_group_southeast_asian": "Southeast Asian",
+"heritage_nordic": "Nordic",
+"heritage_turkmen": "Turkmen",
+"heritage_mongolian": "Mongolian",
+"heritage_group_middle_eastern": "Middle Eastern",
+"heritage_gallic": "Gallic",
+"heritage_cambodian": "Cambodian",
+"heritage_italic": "Italic",
+"heritage_formosan": "Formosan",
+"heritage_congolese": "Congolese",
+"heritage_melanesian": "Melanesian",
+"heritage_albanian": "Albanian",
+"heritage_iberian": "Iberian",
+"heritage_insulindian": "Insulindian",
+"heritage_baltic": "Baltic",
+"heritage_armenian": "Armenian",
+"heritage_greek": "Greek",
+"heritage_ashkenazi": "Ashkenazi",
+"heritage_georgian": "Georgian",
+"heritage_japanese": "Japanese",
+"heritage_british": "British",
+"heritage_south_slavic": "South Slavic",
+"heritage_african_settler": "African Settler",
+"heritage_han": "Han",
+"heritage_syriac": "Syriac",
+"heritage_tatar": "Tatar",
+"heritage_great_basin_indian": "Great Basin Indian",
+"heritage_group_central_asian": "Central Asian",
+"heritage_promethean": "Promethean",
+"heritage_germanic": "Germanic",
+"heritage_plateau_indian": "Plateau Indian",
+"heritage_african_diaspora": "African Diaspora",
+"heritage_southwest_indian": "Southwest Indian",
+"heritage_group_south_asian": "South Asian",
+"heritage_berber": "Berber",
+"heritage_uzbek": "Uzbek",
+"heritage_magyar": "Magyar",
+"heritage_californian_indian": "Californian Indian",
+"heritage_netherlandish": "Netherlandish",
+"heritage_sami": "Sami",
+"heritage_indusine": "Indusine",
+"heritage_andean": "Andean",
+"heritage_northwest_coast_indian": "Northwest Coast Indian",
+"heritage_tai": "Tai",
+"heritage_sahelian": "Sahelian",
+"heritage_patagonian": "Patagonian",
+"heritage_southwest_bantu": "Southwest Bantu",
+"heritage_caribbean": "Caribbean",
+"heritage_deccani": "Deccani",
+"heritage_vietnamese": "Vietnamese",
+"heritage_atlantic": "Atlantic",
+"heritage_eastern_woodlands_indian": "Eastern Woodlands Indian",
+"heritage_manchu": "Manchu",
+"heritage_circumpolar": "Circumpolar",
+"heritage_abyssinian": "Abyssinian",
+"heritage_group_north_asian": "North Asian",
+"heritage_north_american_settler": "North American Settler",
+"heritage_arab": "Arab",
+"heritage_australian": "Australian",
+"heritage_anatolian": "Anatolian",
+"heritage_gujarati": "Gujarati"
+}
+}

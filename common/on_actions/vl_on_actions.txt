@@ -10,8 +10,10 @@ on_game_started = {
     }
 }
 
-# Every country gets Human as its only primary culture, and every pop becomes Human.
-# Pops of the same type, culture and religion in a state merge, so the pop count falls.
+# Pop Cultures rule.
+# One culture: every country gets Human as its only primary culture, and every pop becomes Human.
+# Heritage groups / Heritages: cultures merge into one existing culture per group or heritage, which
+# also inherits the merged cultures' homelands (see scripted_effects/vl_culture_effects.txt).
 vl_unify_culture_on_action = {
     effect = {
         if = {
@@ -34,6 +36,22 @@ vl_unify_culture_on_action = {
                         value = 1
                     }
                 }
+            }
+        }
+        else_if = {
+            limit = { has_game_rule = vl_culture_groups }
+            vl_homelands_to_group_effect = yes
+            every_country = { vl_country_cultures_to_group_effect = yes }
+            every_state = {
+                every_scope_pop = { vl_pop_culture_to_group_effect = yes }
+            }
+        }
+        else_if = {
+            limit = { has_game_rule = vl_culture_heritages }
+            vl_homelands_to_heritage_effect = yes
+            every_country = { vl_country_cultures_to_heritage_effect = yes }
+            every_state = {
+                every_scope_pop = { vl_pop_culture_to_heritage_effect = yes }
             }
         }
     }

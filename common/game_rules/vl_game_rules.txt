@@ -8,6 +8,14 @@ vl_pop_culture = {
         flag = vl_one_culture
     }
 
+    vl_culture_groups = {
+        flag = vl_culture_groups
+    }
+
+    vl_culture_heritages = {
+        flag = vl_culture_heritages
+    }
+
     vl_original_cultures = {
         flag = vl_original_cultures
     }
