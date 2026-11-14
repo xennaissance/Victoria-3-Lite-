@@ -43,5 +43,8 @@ Not yet tested in game. Test checklist:
 8. Pop merging: after a few in-game years, the number of pops (Tick Task List MergeSmallPops activity, or pop counts in large states) should be much lower than vanilla. Watch unemployment: unemployed pops under the merge size with a poor worker ratio are turned into dependents.
 9. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
 
+## Optional ideas (not built)
+- **Keep original primary cultures.** The culture rules currently replace each country's primary cultures. Adding the new culture without removing the old ones would keep vanilla's culture-based map colors (Great Qing turns red without Manchu), dynamic country names (4 color rules, 18 name rules check primary cultures) and nation forming working, at almost no cost, since the old cultures have no pops.
+
 ## Installing for development
 Clone this repository into `Documents\Paradox Interactive\Victoria 3\mod\` and enable it in the launcher.
