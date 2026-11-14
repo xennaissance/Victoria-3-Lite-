@@ -1,4 +1,4 @@
-# Victoria 3 Lite: much more aggressive pop merging.
+﻿# Victoria 3 Lite: much more aggressive pop merging.
 # Vanilla merges a pop into others of the same profession in the same building (or the unemployment
 # pool) only when its workforce is tiny (10-100). Here any pop with up to 500,000 workforce qualifies,
 # so most pops of the same profession in a building merge and the pop count stays low all game.

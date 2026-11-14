@@ -132,13 +132,13 @@ def main():
     names = "l_english:\n"
     orig = ""
     for rep in reps:
-        cl += f"\nvl_cname_{rep} = {{\n    type = country\n"
+        cl += f"\nvl_cname_{rep} = {{\n    type = culture\n"
         if rep in group_of_rep:
             cl += f"    text = {{\n        trigger = {{ has_game_rule = vl_culture_groups }}\n        localization_key = {group_of_rep[rep]}\n    }}\n"
         if rep in heritage_of_rep:
             cl += f"    text = {{\n        trigger = {{ has_game_rule = vl_culture_heritages }}\n        localization_key = {heritage_of_rep[rep]}\n    }}\n"
         cl += f"    text = {{\n        localization_key = vl_cname_orig_{rep}\n    }}\n}}\n"
-        names += f" {rep}:0 \"[GetPlayer.GetCustom('vl_cname_{rep}')]\"\n"
+        names += f" {rep}:0 \"[GetGlobalVariable('vl_name_anchor').GetCulture.GetCustom('vl_cname_{rep}')]\"\n"
         orig += f" vl_cname_orig_{rep}:0 \"{CULTURES[rep]['name']}\"\n"
     write("common/customizable_localization/vl_culture_names.txt", cl)
     write("localization/replace/english/vl_culture_names_l_english.yml", names)

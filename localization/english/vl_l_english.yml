@@ -7,33 +7,21 @@
   rule_vl_pop_culture:0 "Lite: Pop Cultures"
   rule_vl_pop_culture_desc:0 "Changes every pop's culture when a new game starts, so there are far fewer pops and the game runs much faster. This rewrites the world's cultures: anything other than Original changes how nations, minorities and many events behave. Has no effect on saved games."
   setting_vl_one_culture:0 "One culture (fastest)"
-  setting_vl_one_culture_desc:0 "Every pop in the world becomes Human, and Human becomes every country's only primary culture.
-
-What changes: there is no cultural discrimination or assimilation, cultural and national movements do not form, and national awakenings, secessions and culture-based nation forming (such as Germany or Italy) will not happen or will behave differently. Events and journal entries about specific cultures will not fire. Fastest option."
+  setting_vl_one_culture_desc:0 "Every pop in the world becomes Human, and Human becomes every country's only primary culture.\n\nWhat changes: there is no cultural discrimination or assimilation, cultural and national movements do not form, and national awakenings, secessions and culture-based nation forming (such as Germany or Italy) will not happen or will behave differently. Events and journal entries about specific cultures will not fire. Fastest option."
   setting_vl_culture_groups:0 "Heritage groups"
-  setting_vl_culture_groups_desc:0 "Every culture merges into one of eleven: European, East Asian, Middle Eastern, African, South Asian, Southeast Asian, North Asian, Central Asian, Indigenous American, Indigenous Oceanic and Promethean. Countries' primary cultures and homelands merge with them.
-
-What changes: each merged culture is built on one existing culture (European on French, East Asian on Han and so on), so only that culture's events and journal entries still fire. Discrimination exists only between groups, most culture-based nation forming will not work, and cultural movements are rare."
+  setting_vl_culture_groups_desc:0 "Every culture merges into one of eleven: European, East Asian, Middle Eastern, African, South Asian, Southeast Asian, North Asian, Central Asian, Indigenous American, Indigenous Oceanic and Promethean. Countries' primary cultures and homelands merge with them.\n\nWhat changes: each merged culture is built on one existing culture (European on French, East Asian on Han and so on), so only that culture's events and journal entries still fire. Discrimination exists only between groups, most culture-based nation forming will not work, and cultural movements are rare."
   setting_vl_culture_heritages:0 "Heritages"
-  setting_vl_culture_heritages_desc:0 "Every culture merges into one per heritage, about a hundred in total (Germanic, Gallic, East Slavic, British and so on). Countries' primary cultures and homelands merge with them.
-
-What changes: each merged culture is built on one existing culture (Germanic on North German, East Slavic on Russian and so on), so only that culture's events and journal entries still fire. For example, Bavarians and Prussians become one Germanic people, and Ukrainians become East Slavic. Some nation forming and national movements will behave differently."
+  setting_vl_culture_heritages_desc:0 "Every culture merges into one per heritage, about a hundred in total (Germanic, Gallic, East Slavic, British and so on). Countries' primary cultures and homelands merge with them.\n\nWhat changes: each merged culture is built on one existing culture (Germanic on North German, East Slavic on Russian and so on), so only that culture's events and journal entries still fire. For example, Bavarians and Prussians become one Germanic people, and Ukrainians become East Slavic. Some nation forming and national movements will behave differently."
   setting_vl_original_cultures:0 "Original cultures"
   setting_vl_original_cultures_desc:0 "Pops and countries keep their historical cultures, as in vanilla. More pops, so slower."
   rule_vl_pop_religion:0 "Lite: Pop Religions"
   rule_vl_pop_religion_desc:0 "Changes every pop's religion when a new game starts, so there are fewer pops and the game runs faster. This rewrites the world's religions: anything other than Original changes religious politics and many events. Has no effect on saved games."
   setting_vl_religion_one_faith:0 "One faith (fastest)"
-  setting_vl_religion_one_faith_desc:0 "Every pop and every country follows a single new religion, the Faith.
-
-What changes: there is no religious discrimination, religious movements do not form, and events, journal entries and decisions about specific religions (the Pope, Shinto reforms, Ottoman millets and so on) will not fire. Clergy still work normally, because the Faith is not Atheist. Fastest option."
+  setting_vl_religion_one_faith_desc:0 "Every pop and every country follows a single new religion, the Faith.\n\nWhat changes: there is no religious discrimination, religious movements do not form, and events, journal entries and decisions about specific religions (the Pope, Shinto reforms, Ottoman millets and so on) will not fire. Clergy still work normally, because the Faith is not Atheist. Fastest option."
   setting_vl_religion_groups:0 "Heritage groups"
-  setting_vl_religion_groups_desc:0 "Every religion merges into one of four: Abrahamic, Eastern, Naturalistic and Non-Spiritual. Countries' state religions merge too.
-
-What changes: Abrahamic is built on Catholic, Eastern on Confucian, Naturalistic on Animist and Non-Spiritual on Atheist, so only those religions' events and journal entries still fire. Protestants, Orthodox, Muslims and Jews all become Abrahamic, and Hindus and Buddhists become Eastern."
+  setting_vl_religion_groups_desc:0 "Every religion merges into one of four: Abrahamic, Eastern, Naturalistic and Non-Spiritual. Countries' state religions merge too.\n\nWhat changes: Abrahamic is built on Catholic, Eastern on Confucian, Naturalistic on Animist and Non-Spiritual on Atheist, so only those religions' events and journal entries still fire. Protestants, Orthodox, Muslims and Jews all become Abrahamic, and Hindus and Buddhists become Eastern."
   setting_vl_religion_heritages:0 "Heritages"
-  setting_vl_religion_heritages_desc:0 "Every religion merges into one of seven: Christian, Islamic, Jewish, Dharmic, Taoic, Indigenous and Materialist. Countries' state religions merge too.
-
-What changes: these are built on Catholic, Sunni, Jewish, Hindu, Confucian, Animist and Atheist, so only those religions' events and journal entries still fire. For example, Protestants and Orthodox become Christian, Shiites become Islamic, and Buddhists and Sikhs become Dharmic."
+  setting_vl_religion_heritages_desc:0 "Every religion merges into one of seven: Christian, Islamic, Jewish, Dharmic, Taoic, Indigenous and Materialist. Countries' state religions merge too.\n\nWhat changes: these are built on Catholic, Sunni, Jewish, Hindu, Confucian, Animist and Atheist, so only those religions' events and journal entries still fire. For example, Protestants and Orthodox become Christian, Shiites become Islamic, and Buddhists and Sikhs become Dharmic."
   setting_vl_original_religions:0 "Original religions"
   setting_vl_original_religions_desc:0 "Pops and countries keep their historical religions, as in vanilla. More pops, so slower."
   rule_vl_pop_consolidation:0 "Lite: Pop Consolidation"
@@ -41,9 +29,7 @@ What changes: these are built on Catholic, Sunni, Jewish, Hindu, Confucian, Anim
   setting_vl_consolidation_off:0 "Off"
   setting_vl_consolidation_off_desc:0 "States keep their mix of cultures and religions."
   setting_vl_consolidation_on:0 "On (faster)"
-  setting_vl_consolidation_on_desc:0 "Every pop in a state takes that state's largest culture and largest religion, so each state has exactly one of each.
-
-What changes: minorities disappear within each state. Countries keep their primary cultures and state religions, so a state whose majority is not the country's culture becomes entirely that other culture, which can raise discrimination and unrest in mixed empires. On by default, so you still get much of the speed-up if you set cultures or religions back to Original."
+  setting_vl_consolidation_on_desc:0 "Every pop in a state takes that state's largest culture and largest religion, so each state has exactly one of each.\n\nWhat changes: minorities disappear within each state. Countries keep their primary cultures and state religions, so a state whose majority is not the country's culture becomes entirely that other culture, which can raise discrimination and unrest in mixed empires. On by default, so you still get much of the speed-up if you set cultures or religions back to Original."
   rule_vl_costly_alerts:0 "Lite: Costly Alerts"
   rule_vl_costly_alerts_desc:0 "Some alerts are expensive to check every tick. Turning them off makes late games faster."
   setting_vl_costly_alerts_off:0 "Off (faster)"

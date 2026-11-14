@@ -1,4 +1,4 @@
-# Victoria 3 Lite: migration settings carried over from the United Nations of Earth mod.
+﻿# Victoria 3 Lite: migration settings carried over from the United Nations of Earth mod.
 # In UNE these removed a weekly freeze in ProcessEconomicMigration. Only market (internal) migration
 # is changed here; mass migration between countries is left as in vanilla.
 # Defines are global and cannot be switched by game rules.

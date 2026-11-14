@@ -1,0 +1,33 @@
+﻿# Victoria 3 Lite: modifier types the engine expects for the Human culture and the Faith religion.
+
+state_vl_human_standard_of_living_add = {
+    decimals = 1
+    color = good
+    game_data = {
+        ai_value = 0
+    }
+}
+
+country_vl_human_cultural_acceptance_add = {
+    decimals = 1
+    color = good
+    game_data = {
+        ai_value = 0
+    }
+}
+
+country_fervor_target_vl_human_add = {
+    decimals = 1
+    color = good
+    game_data = {
+        ai_value = 0
+    }
+}
+
+state_vl_faith_standard_of_living_add = {
+    decimals = 1
+    color = good
+    game_data = {
+        ai_value = 0
+    }
+}

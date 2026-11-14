@@ -30,12 +30,12 @@ Done:
 - **Pop Consolidation** game rule (default: on). At game start every pop in a state takes the state's largest culture and largest religion. Works on top of the other two rules; most useful with Original cultures or religions.
 - **Migration** (always on): market migration settings from the United Nations of Earth mod. Migrants go to the single most attractive state in their market, and only states with near-zero pull send emigrants. Mass migration between countries is unchanged. See `common/defines/99_vl_migration_defines.txt`.
 - **Pop merging** (follows vanilla's pop consolidation rule, renamed "Pop Merge (Performance)"): pops with up to 500,000 workforce can merge with others of the same profession in the same building, instead of vanilla's 10-100. See `common/defines/99_vl_pop_merge_defines.txt`.
-- **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check.
+- **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check. Alerts cannot be partially overridden, so the mod ships a full copy of vanilla's `00_alert_types.txt`.
 
 Not yet tested in game. Test checklist:
 1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_` or `alert_types`.
 2. Open a few countries: primary culture should be Human, state religion the Faith, and pops should show no culture or religion discrimination.
-3. Start games with Pop Religions on Heritage groups and on Heritages. Check that religion names read Abrahamic / Christian and so on everywhere (state panel, pop list, country panel, tooltips), and that no screen shows raw text like `[GetPlayer...]`. Check the main menu and lobby too. With Original religions, names must read as vanilla.
+3. Start games with Pop Religions on Heritage groups and on Heritages. Check that religion names read Abrahamic / Christian and so on everywhere (state panel, pop list, country panel, tooltips), and that no screen shows raw text like `[GetGlobalVariable...]`. Check the main menu and lobby too. With Original religions, names must read as vanilla.
 4. Start games with Pop Cultures on Heritage groups and on Heritages: France's primary culture should read European / Gallic, homelands should cover the merged cultures' old homelands, and culture names should read correctly everywhere.
 5. With Pop Cultures and Pop Religions on Original and Pop Consolidation on: every state should show a single culture and a single religion, the one that was largest before.
 6. With Costly Alerts off, the low standard of living alert should never appear; with it on, it should.

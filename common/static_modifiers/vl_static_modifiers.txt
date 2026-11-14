@@ -1,0 +1,41 @@
+﻿# Victoria 3 Lite: static modifiers the engine expects for the Human culture and the Faith religion (copied from the vanilla pattern).
+
+vl_human_standard_of_living_modifier_positive = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+    state_vl_human_standard_of_living_add = 1
+}
+
+vl_human_standard_of_living_modifier_negative = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+    state_vl_human_standard_of_living_add = 1
+}
+
+vl_human_cultural_acceptance_modifier_positive = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+    country_vl_human_cultural_acceptance_add = 1
+}
+
+vl_human_cultural_acceptance_modifier_negative = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+    country_vl_human_cultural_acceptance_add = 1
+}
+
+vl_human_fervor_target_modifier_positive = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+    country_fervor_target_vl_human_add = 1
+}
+
+vl_human_fervor_target_modifier_negative = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+    country_fervor_target_vl_human_add = 1
+}
+
+vl_faith_standard_of_living_modifier_positive = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+    state_vl_faith_standard_of_living_add = 1
+}
+
+vl_faith_standard_of_living_modifier_negative = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+    state_vl_faith_standard_of_living_add = 1
+}

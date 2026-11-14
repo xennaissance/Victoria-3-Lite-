@@ -4,9 +4,21 @@
 
 on_game_started = {
     on_actions = {
+        vl_set_name_anchor_on_action
         vl_unify_culture_on_action
         vl_unify_religion_on_action
         vl_consolidate_pops_on_action
+    }
+}
+
+# Culture and religion names that follow the game rules are customizable localization, which must be
+# called on a valid object. A global variable holding the Human culture (which always exists) is that object.
+vl_set_name_anchor_on_action = {
+    effect = {
+        set_global_variable = {
+            name = vl_name_anchor
+            value = cu:vl_human
+        }
     }
 }
 
