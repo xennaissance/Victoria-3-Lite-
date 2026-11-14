@@ -1,4 +1,4 @@
-﻿# Victoria 3 Lite: values used by the "Pop Consolidation" game rule.
+﻿# Victoria 3 Lite: values used by the "Pop Merge" game rule.
 # Pop scope. Total size of all pops in this pop's state that share its culture (or religion).
 # Used as order_by to find the largest culture and religion in a state.
 

@@ -41,15 +41,15 @@ vl_pop_religion = {
     }
 }
 
-vl_pop_consolidation = {
-    default = vl_consolidation_on
+vl_pop_merge = {
+    default = vl_pop_merge_on
 
-    vl_consolidation_off = {
-        flag = vl_consolidation_off
+    vl_pop_merge_off = {
+        flag = vl_pop_merge_off
     }
 
-    vl_consolidation_on = {
-        flag = vl_consolidation_on
+    vl_pop_merge_on = {
+        flag = vl_pop_merge_on
     }
 }
 
