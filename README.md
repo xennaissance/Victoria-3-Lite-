@@ -29,6 +29,7 @@ Done:
   Merged religions keep the underlying vanilla religion, so its events and journal entries still work, and show the group or heritage name on screen through customizable localization.
 - **Pop Consolidation** game rule (default: on). At game start every pop in a state takes the state's largest culture and largest religion. Works on top of the other two rules; most useful with Original cultures or religions.
 - **Migration** (always on): market migration settings from the United Nations of Earth mod. Migrants go to the single most attractive state in their market, and only states with near-zero pull send emigrants. Mass migration between countries is unchanged. See `common/defines/99_vl_migration_defines.txt`.
+- **Pop merging** (always on, follows vanilla's own Pop Consolidation rule): pops with up to 500,000 workforce can merge with others of the same profession in the same building, instead of vanilla's 10-100. See `common/defines/99_vl_pop_merge_defines.txt`.
 - **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check.
 
 Not yet tested in game. Test checklist:
@@ -39,7 +40,8 @@ Not yet tested in game. Test checklist:
 5. With Pop Cultures and Pop Religions on Original and Pop Consolidation on: every state should show a single culture and a single religion, the one that was largest before.
 6. With Costly Alerts off, the low standard of living alert should never appear; with it on, it should.
 7. Migration: in the market panel or a state's migration tooltip, immigrants should go to one top state at a time; watch the Tick Task List for ProcessEconomicMigration lock times.
-8. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
+8. Pop merging: after a few in-game years, the number of pops (Tick Task List MergeSmallPops activity, or pop counts in large states) should be much lower than vanilla. Watch unemployment: unemployed pops under the merge size with a poor worker ratio are turned into dependents.
+9. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
 
 ## Installing for development
 Clone this repository into `Documents\Paradox Interactive\Victoria 3\mod\` and enable it in the launcher.
