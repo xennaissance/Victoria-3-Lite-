@@ -1,0 +1,8 @@
+﻿# Victoria 3 Lite: trait groups for the Human heritage and language.
+vl_heritage_group_human = {
+    type = heritage
+}
+
+vl_language_group_human = {
+    type = language
+}

@@ -12,7 +12,16 @@ A performance mod for Victoria 3 (game version 1.15.1). Made for people who need
 - Simpler AI scoring, fewer countries, cheaper pop qualification checks, lighter portraits, and fewer costly alerts and progress bars. Each change is measured before it ships.
 
 ## Status
-Early development. Not yet playable.
+Early development (v0.1).
+
+Done:
+- **Pop Cultures** game rule (default: one culture). At game start every pop and every country's primary culture becomes Human.
+- **Pop Religions** game rule (default: one religion). At game start every pop and every country's state religion becomes Atheist.
+
+Not yet tested in game. Test checklist:
+1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_`.
+2. Open a few countries: primary culture should be Human, state religion Atheist, and pops should show no culture or religion discrimination.
+3. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
 
 ## Installing for development
 Clone this repository into `Documents\Paradox Interactive\Victoria 3\mod\` and enable it in the launcher.

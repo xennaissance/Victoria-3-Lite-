@@ -1,0 +1,59 @@
+﻿# Victoria 3 Lite on_actions.
+# Hooks into on_game_started (fires once when a new game is set up, no root scope)
+# through its on_actions list, so vanilla's own effect block is left untouched.
+
+on_game_started = {
+    on_actions = {
+        vl_unify_culture_on_action
+        vl_unify_religion_on_action
+    }
+}
+
+# Every country gets Human as its only primary culture, and every pop becomes Human.
+# Pops of the same type, culture and religion in a state merge, so the pop count falls.
+vl_unify_culture_on_action = {
+    effect = {
+        if = {
+            limit = { has_game_rule = vl_one_culture }
+            every_country = {
+                save_scope_as = vl_country
+                add_primary_culture = cu:vl_human
+                every_primary_culture = {
+                    limit = { NOT = { this = cu:vl_human } }
+                    save_scope_as = vl_old_culture
+                    scope:vl_country = {
+                        remove_primary_culture = scope:vl_old_culture
+                    }
+                }
+            }
+            every_state = {
+                every_scope_pop = {
+                    change_pop_culture = {
+                        target = cu:vl_human
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Every country's state religion becomes Atheist, and every pop becomes Atheist.
+vl_unify_religion_on_action = {
+    effect = {
+        if = {
+            limit = { has_game_rule = vl_one_religion }
+            every_country = {
+                set_state_religion = rel:atheist
+            }
+            every_state = {
+                every_scope_pop = {
+                    change_pop_religion = {
+                        target = rel:atheist
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+}

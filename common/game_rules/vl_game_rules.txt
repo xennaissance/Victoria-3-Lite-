@@ -1,0 +1,26 @@
+﻿# Victoria 3 Lite game rules.
+# Both rules default to the fast option. They only act when a new game starts.
+
+vl_pop_culture = {
+    default = vl_one_culture
+
+    vl_one_culture = {
+        flag = vl_one_culture
+    }
+
+    vl_original_cultures = {
+        flag = vl_original_cultures
+    }
+}
+
+vl_pop_religion = {
+    default = vl_one_religion
+
+    vl_one_religion = {
+        flag = vl_one_religion
+    }
+
+    vl_original_religions = {
+        flag = vl_original_religions
+    }
+}
