@@ -1,0 +1,33 @@
+﻿# Victoria 3 Lite: recalculate engine-side values less often and keep fewer tiny pops.
+# Each value notes the vanilla 1.15.1 value and the gameplay effect.
+
+NAI = {
+	# AI refreshes its full spending variables half as often. AI budgets react a little slower.
+	TICKS_FOR_FULL_SPENDING_VARIABLES_UPDATE = 200		# vanilla 100
+	# AI re-evaluates each potential building spending state half as often (score still updates in between).
+	MIN_TICKS_TO_UPDATE_BUILDING_SPENDING_STATE = 200	# vanilla 100
+	MAX_TICKS_TO_UPDATE_BUILDING_SPENDING_STATE = 400	# vanilla 200
+	# Fewer AIs per day get their antagonize/befriend/threat scores and attitudes adjusted
+	# (each AI about every 8 days instead of 4). AI attitudes change a bit more slowly.
+	COUNTRY_GOAL_ADJUSTMENT_UPDATE_COUNT = 25			# vanilla 50
+}
+
+NEconomy = {
+	# Trade potential in states without a Trade Center is updated every 90 days. Only feeds AI Trade Center planning.
+	NON_TRADE_CENTER_STATE_TRADE_POTENTIAL_UPDATE_FREQUENCY = 90	# vanilla 30
+	# Buildings wait between wage changes, so wages flicker less and pops reshuffle jobs less often.
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 2					# vanilla 0
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 1	# vanilla 0
+	# A building that failed to hire waits longer before trying again (unless it raised wages).
+	BUILDING_FAILED_HIRE_COOLDOWN_WEEKS_WITHOUT_WAGE_RAISE = 8	# vanilla 4
+}
+
+NPops = {
+	# Pops of the same profession in a building merge even when only 2 such pops exist.
+	POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_MINOR_CONSOLIDATION = 2		# vanilla 5
+	POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_MODERATE_CONSOLIDATION = 2	# vanilla 4
+	POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_AGGRESSIVE_CONSOLIDATION = 2	# vanilla 3
+	# Pops under 2,000 people dissolve into a pop of the same culture and religion in the same state
+	# (state demographics are preserved; the last pop of a culture is never dissolved).
+	POP_DISSOLVE_MAX_TOTAL_SIZE = 2000		# vanilla 100
+}

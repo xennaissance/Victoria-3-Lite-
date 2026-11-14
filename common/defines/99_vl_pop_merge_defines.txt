@@ -3,7 +3,7 @@
 # pool) only when its workforce is tiny (10-100). Here any pop with up to 500,000 workforce qualifies,
 # so most pops of the same profession in a building merge and the pop count stays low all game.
 # Applies to the vanilla pop consolidation game rule (shown as "Pop Merge (Performance)" with this mod), levels Minor, Moderate (default) and Aggressive;
-# "No consolidation" still turns merging off. Pop dissolving (POP_DISSOLVE_*) is left as vanilla.
+# "No consolidation" still turns merging off. Pop dissolving is raised in 99_vl_recalc_defines.txt.
 NPops = {
     POP_MERGE_MAX_WORKFORCE_MINOR_CONSOLIDATION = 500000        # vanilla 10
     POP_MERGE_MAX_WORKFORCE_MODERATE_CONSOLIDATION = 500000     # vanilla 30
