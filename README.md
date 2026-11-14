@@ -31,6 +31,7 @@ Done:
 - **Pop Consolidation** game rule (default: on). At game start every pop in a state takes the state's largest culture and largest religion. Works on top of the other two rules; most useful with Original cultures or religions.
 - **Migration** (always on): market migration settings from the United Nations of Earth mod. Migrants go to the single most attractive state in their market, and only states with near-zero pull send emigrants. Mass migration between countries is unchanged. See `common/defines/99_vl_migration_defines.txt`.
 - **Pop merging** (follows vanilla's pop consolidation rule, renamed "Pop Merge (Performance)"): pops with up to 500,000 workforce can merge with others of the same profession in the same building, instead of vanilla's 10-100. See `common/defines/99_vl_pop_merge_defines.txt`.
+- **Journal entry checks** (always on): active journal entries are checked weekly instead of every 4 days, inactive ones monthly instead of every 14 days (`common/defines/99_vl_update_defines.txt`). Completion or failure can show up a few days later.
 - **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check. Alerts cannot be partially overridden, so the mod ships a full copy of vanilla's `00_alert_types.txt`.
 - **Simpler AI region scoring** (always on). Patched copies of two values injected into vanilla's default AI strategy (`ai_strategies/vl_ai_strategy_inject.txt`):
   - Minor powers skip scoring regions they neither own a state in nor border.

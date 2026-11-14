@@ -1,0 +1,9 @@
+﻿# Victoria 3 Lite: how often journal entries are checked (vanilla 4 and 14 days, per the 1.15.1 define comments).
+# Journal entry triggers and progress are about 7% of script time at 1880. Checking active ones weekly and inactive
+# ones monthly cuts that work; completion or failure can show up a few days later than in vanilla.
+# Journal entry types that set their own update interval are unaffected.
+
+NCountry = {
+	JOURNAL_ENTRY_UPDATE_ACTIVE = 7
+	JOURNAL_ENTRY_UPDATE_INACTIVE = 30
+}
