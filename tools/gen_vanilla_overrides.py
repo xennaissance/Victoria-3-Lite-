@@ -191,6 +191,7 @@ NEIGHBOUR_SCAN = ws("owner = { any_neighbouring_state = { owner = {")
 NEIGHBOUR_LIST = (
     "any_in_global_list = { # Victoria 3 Lite: only countries with an insurrection (list refreshed monthly), not every neighbouring state\n"
     "\t\t\t\t\tvariable = vl_insurgent_countries\n"
+    "\t\t\t\t\texists = this # a country on the list may have ceased to exist since the monthly rebuild\n"
     "\t\t\t\t\tis_adjacent_to_country = ROOT.owner\n"
     "\t\t\t\t\tAND = { AND = {"
 )

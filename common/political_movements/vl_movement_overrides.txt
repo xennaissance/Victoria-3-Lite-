@@ -469,6 +469,7 @@ REPLACE:movement_cultural_majority = {
 			limit = {
 				any_in_global_list = { # Victoria 3 Lite: only countries with an insurrection (list refreshed monthly), not every neighbouring state
 					variable = vl_insurgent_countries
+					exists = this # a country on the list may have ceased to exist since the monthly rebuild
 					is_adjacent_to_country = ROOT.owner
 					AND = { AND = {
 							NOT = { THIS = ROOT.owner }
@@ -1273,6 +1274,7 @@ REPLACE:movement_cultural_minority = {
 			limit = {
 				any_in_global_list = { # Victoria 3 Lite: only countries with an insurrection (list refreshed monthly), not every neighbouring state
 					variable = vl_insurgent_countries
+					exists = this # a country on the list may have ceased to exist since the monthly rebuild
 					is_adjacent_to_country = ROOT.owner
 					AND = { AND = {
 							NOT = { THIS = ROOT.owner }
