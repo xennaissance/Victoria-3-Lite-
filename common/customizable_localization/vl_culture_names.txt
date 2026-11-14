@@ -284,14 +284,14 @@ vl_cname_circassian = {
     }
 }
 
-vl_cname_deccani = {
+vl_cname_dutch = {
     type = country
     text = {
         trigger = { has_game_rule = vl_culture_heritages }
-        localization_key = heritage_deccani
+        localization_key = heritage_netherlandish
     }
     text = {
-        localization_key = vl_cname_orig_deccani
+        localization_key = vl_cname_orig_dutch
     }
 }
 
@@ -468,17 +468,6 @@ vl_cname_hungarian = {
     }
 }
 
-vl_cname_iberian = {
-    type = country
-    text = {
-        trigger = { has_game_rule = vl_culture_heritages }
-        localization_key = heritage_iberian
-    }
-    text = {
-        localization_key = vl_cname_orig_iberian
-    }
-}
-
 vl_cname_japanese = {
     type = country
     text = {
@@ -638,6 +627,17 @@ vl_cname_manchu = {
     }
     text = {
         localization_key = vl_cname_orig_manchu
+    }
+}
+
+vl_cname_marathi = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_culture_heritages }
+        localization_key = heritage_deccani
+    }
+    text = {
+        localization_key = vl_cname_orig_marathi
     }
 }
 
@@ -975,6 +975,17 @@ vl_cname_south_andean = {
     }
 }
 
+vl_cname_spanish = {
+    type = country
+    text = {
+        trigger = { has_game_rule = vl_culture_heritages }
+        localization_key = heritage_iberian
+    }
+    text = {
+        localization_key = vl_cname_orig_spanish
+    }
+}
+
 vl_cname_swahili = {
     type = country
     text = {
@@ -1116,17 +1127,6 @@ vl_cname_vietnamese = {
     }
     text = {
         localization_key = vl_cname_orig_vietnamese
-    }
-}
-
-vl_cname_wallonian = {
-    type = country
-    text = {
-        trigger = { has_game_rule = vl_culture_heritages }
-        localization_key = heritage_netherlandish
-    }
-    text = {
-        localization_key = vl_cname_orig_wallonian
     }
 }
 

@@ -39,11 +39,11 @@
 | European | french | Georgian | georgian | georgian |
 | European | french | Germanic | north_german | alemannic, east_german, north_german, south_german |
 | European | french | Greek | greek | greek |
-| European | french | Iberian | iberian | aragonese, asturleonese, basque, catalan, galician, iberian, portuguese, spanish |
+| European | french | Iberian | spanish | aragonese, asturleonese, basque, catalan, galician, iberian, portuguese, spanish |
 | European | french | Italic | north_italian | corsican, maltese, north_italian, south_italian |
 | European | french | Latin American Settler | south_andean | amazonic, argentine, bolivian, brazilian, caribeno, central_american, chilean, colombian, ecuadorian, mexican, nordestino, north_andean, paraguayan, paulista, peruvian, platinean, south_andean, sulista, uruguayan, venezuelan |
 | European | french | Magyar | hungarian | hungarian, szekely |
-| European | french | Netherlandish | wallonian | dutch, flemish, wallonian |
+| European | french | Netherlandish | dutch | dutch, flemish, wallonian |
 | European | french | Nordic | swedish | danish, finnish, icelandic, karelian, norwegian, swedish |
 | European | french | North American Settler | yankee | anglo_canadian, cajun, dixie, franco_canadian, yankee |
 | European | french | North Caucasian | circassian | abkhazian, caucasian_turk, chechen, circassian, dagestani, ossetian |
@@ -88,7 +88,7 @@
 | South Asian | bengali | Assamese | assamese | assamese |
 | South Asian | bengali | Carnatic | tamil | malayalam, tamil |
 | South Asian | bengali | Central | bageli | bageli, bundeli, chhattisgarhi, gondi |
-| South Asian | bengali | Deccani | deccani | deccani, kannada, marathi, telegu |
+| South Asian | bengali | Deccani | marathi | deccani, kannada, marathi, telegu |
 | South Asian | bengali | Gangetic | bengali | avadhi, bengali, bihari, hindustani, oriya |
 | South Asian | bengali | Gujarati | gujarati | gujarati |
 | South Asian | bengali | Himalayan | pahari | nepali, pahari |

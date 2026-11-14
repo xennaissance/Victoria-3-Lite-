@@ -41,6 +41,9 @@ HERITAGE_OVERRIDES = {
     "heritage_north_american_settler": "yankee",
     "heritage_south_slavic": "serb",
     "heritage_nordic": "swedish",
+    "heritage_iberian": "spanish",
+    "heritage_netherlandish": "dutch",
+    "heritage_deccani": "marathi",
 }
 
 

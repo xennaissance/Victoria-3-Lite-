@@ -159,7 +159,7 @@ vl_pop_culture_to_heritage_effect = {
     }
     else_if = {
         limit = { culture = { has_discrimination_trait = heritage_deccani } }
-        change_pop_culture = { target = cu:deccani value = 1 }
+        change_pop_culture = { target = cu:marathi value = 1 }
     }
     else_if = {
         limit = { culture = { has_discrimination_trait = heritage_east_african } }
@@ -235,7 +235,7 @@ vl_pop_culture_to_heritage_effect = {
     }
     else_if = {
         limit = { culture = { has_discrimination_trait = heritage_iberian } }
-        change_pop_culture = { target = cu:iberian value = 1 }
+        change_pop_culture = { target = cu:spanish value = 1 }
     }
     else_if = {
         limit = { culture = { has_discrimination_trait = heritage_indusine } }
@@ -319,7 +319,7 @@ vl_pop_culture_to_heritage_effect = {
     }
     else_if = {
         limit = { culture = { has_discrimination_trait = heritage_netherlandish } }
-        change_pop_culture = { target = cu:wallonian value = 1 }
+        change_pop_culture = { target = cu:dutch value = 1 }
     }
     else_if = {
         limit = { culture = { has_discrimination_trait = heritage_nilotic } }
@@ -625,7 +625,7 @@ vl_country_cultures_to_heritage_effect = {
         }
         else_if = {
             limit = { has_discrimination_trait = heritage_deccani }
-            cu:deccani = { save_scope_as = vl_new_culture }
+            cu:marathi = { save_scope_as = vl_new_culture }
         }
         else_if = {
             limit = { has_discrimination_trait = heritage_east_african }
@@ -701,7 +701,7 @@ vl_country_cultures_to_heritage_effect = {
         }
         else_if = {
             limit = { has_discrimination_trait = heritage_iberian }
-            cu:iberian = { save_scope_as = vl_new_culture }
+            cu:spanish = { save_scope_as = vl_new_culture }
         }
         else_if = {
             limit = { has_discrimination_trait = heritage_indusine }
@@ -785,7 +785,7 @@ vl_country_cultures_to_heritage_effect = {
         }
         else_if = {
             limit = { has_discrimination_trait = heritage_netherlandish }
-            cu:wallonian = { save_scope_as = vl_new_culture }
+            cu:dutch = { save_scope_as = vl_new_culture }
         }
         else_if = {
             limit = { has_discrimination_trait = heritage_nilotic }
@@ -1253,9 +1253,9 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:alemannic } add_homeland = cu:north_german }
     every_state_region = { limit = { is_homeland = cu:amazonic } add_homeland = cu:south_andean }
     every_state_region = { limit = { is_homeland = cu:anglo_canadian } add_homeland = cu:yankee }
-    every_state_region = { limit = { is_homeland = cu:aragonese } add_homeland = cu:iberian }
+    every_state_region = { limit = { is_homeland = cu:aragonese } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:argentine } add_homeland = cu:south_andean }
-    every_state_region = { limit = { is_homeland = cu:asturleonese } add_homeland = cu:iberian }
+    every_state_region = { limit = { is_homeland = cu:asturleonese } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:australian } add_homeland = cu:british }
     every_state_region = { limit = { is_homeland = cu:avadhi } add_homeland = cu:bengali }
     every_state_region = { limit = { is_homeland = cu:azerbaijani } add_homeland = cu:turkish }
@@ -1265,7 +1265,7 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:balinese } add_homeland = cu:filipino_mestizo }
     every_state_region = { limit = { is_homeland = cu:baluchi } add_homeland = cu:pashtun }
     every_state_region = { limit = { is_homeland = cu:bashkir } add_homeland = cu:tatar }
-    every_state_region = { limit = { is_homeland = cu:basque } add_homeland = cu:iberian }
+    every_state_region = { limit = { is_homeland = cu:basque } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:bassa } add_homeland = cu:akan }
     every_state_region = { limit = { is_homeland = cu:batak } add_homeland = cu:filipino_mestizo }
     every_state_region = { limit = { is_homeland = cu:bedouin } add_homeland = cu:maghrebi }
@@ -1284,7 +1284,7 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:caddoan } add_homeland = cu:apache }
     every_state_region = { limit = { is_homeland = cu:cajun } add_homeland = cu:yankee }
     every_state_region = { limit = { is_homeland = cu:caribeno } add_homeland = cu:south_andean }
-    every_state_region = { limit = { is_homeland = cu:catalan } add_homeland = cu:iberian }
+    every_state_region = { limit = { is_homeland = cu:catalan } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:caucasian_turk } add_homeland = cu:circassian }
     every_state_region = { limit = { is_homeland = cu:central_american } add_homeland = cu:south_andean }
     every_state_region = { limit = { is_homeland = cu:champa } add_homeland = cu:filipino_mestizo }
@@ -1305,9 +1305,9 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:dakota } add_homeland = cu:cherokee }
     every_state_region = { limit = { is_homeland = cu:danish } add_homeland = cu:swedish }
     every_state_region = { limit = { is_homeland = cu:dayak } add_homeland = cu:filipino_mestizo }
+    every_state_region = { limit = { is_homeland = cu:deccani } add_homeland = cu:marathi }
     every_state_region = { limit = { is_homeland = cu:dinka } add_homeland = cu:nilotic }
     every_state_region = { limit = { is_homeland = cu:dixie } add_homeland = cu:yankee }
-    every_state_region = { limit = { is_homeland = cu:dutch } add_homeland = cu:wallonian }
     every_state_region = { limit = { is_homeland = cu:dyula } add_homeland = cu:bambara }
     every_state_region = { limit = { is_homeland = cu:east_german } add_homeland = cu:north_german }
     every_state_region = { limit = { is_homeland = cu:ecuadorian } add_homeland = cu:south_andean }
@@ -1320,19 +1320,20 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:filipino } add_homeland = cu:filipino_mestizo }
     every_state_region = { limit = { is_homeland = cu:filipino_hispanophone } add_homeland = cu:filipino_mestizo }
     every_state_region = { limit = { is_homeland = cu:finnish } add_homeland = cu:swedish }
-    every_state_region = { limit = { is_homeland = cu:flemish } add_homeland = cu:wallonian }
+    every_state_region = { limit = { is_homeland = cu:flemish } add_homeland = cu:dutch }
     every_state_region = { limit = { is_homeland = cu:fluvian_bantu } add_homeland = cu:azande }
     every_state_region = { limit = { is_homeland = cu:fon } add_homeland = cu:akan }
     every_state_region = { limit = { is_homeland = cu:franco_canadian } add_homeland = cu:yankee }
     every_state_region = { limit = { is_homeland = cu:francoprovencal } add_homeland = cu:french }
     every_state_region = { limit = { is_homeland = cu:fulbe } add_homeland = cu:bambara }
-    every_state_region = { limit = { is_homeland = cu:galician } add_homeland = cu:iberian }
+    every_state_region = { limit = { is_homeland = cu:galician } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:gondi } add_homeland = cu:bageli }
     every_state_region = { limit = { is_homeland = cu:guajiro } add_homeland = cu:cariban }
     every_state_region = { limit = { is_homeland = cu:hakka } add_homeland = cu:han }
     every_state_region = { limit = { is_homeland = cu:hausa } add_homeland = cu:bambara }
     every_state_region = { limit = { is_homeland = cu:hawaiian } add_homeland = cu:polynesian }
     every_state_region = { limit = { is_homeland = cu:hindustani } add_homeland = cu:bengali }
+    every_state_region = { limit = { is_homeland = cu:iberian } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:ibibio } add_homeland = cu:akan }
     every_state_region = { limit = { is_homeland = cu:ibo } add_homeland = cu:akan }
     every_state_region = { limit = { is_homeland = cu:icelandic } add_homeland = cu:swedish }
@@ -1342,7 +1343,7 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:iroquoian } add_homeland = cu:algonquian }
     every_state_region = { limit = { is_homeland = cu:javan } add_homeland = cu:filipino_mestizo }
     every_state_region = { limit = { is_homeland = cu:kachin } add_homeland = cu:burmese }
-    every_state_region = { limit = { is_homeland = cu:kannada } add_homeland = cu:deccani }
+    every_state_region = { limit = { is_homeland = cu:kannada } add_homeland = cu:marathi }
     every_state_region = { limit = { is_homeland = cu:kanuri } add_homeland = cu:bambara }
     every_state_region = { limit = { is_homeland = cu:karelian } add_homeland = cu:swedish }
     every_state_region = { limit = { is_homeland = cu:karen } add_homeland = cu:burmese }
@@ -1369,7 +1370,6 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:mande } add_homeland = cu:bambara }
     every_state_region = { limit = { is_homeland = cu:manipuri } add_homeland = cu:lushai }
     every_state_region = { limit = { is_homeland = cu:maori } add_homeland = cu:polynesian }
-    every_state_region = { limit = { is_homeland = cu:marathi } add_homeland = cu:deccani }
     every_state_region = { limit = { is_homeland = cu:mashriqi } add_homeland = cu:maghrebi }
     every_state_region = { limit = { is_homeland = cu:mazanderani } add_homeland = cu:pashtun }
     every_state_region = { limit = { is_homeland = cu:metis } add_homeland = cu:cherokee }
@@ -1408,7 +1408,7 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:persian } add_homeland = cu:pashtun }
     every_state_region = { limit = { is_homeland = cu:peruvian } add_homeland = cu:south_andean }
     every_state_region = { limit = { is_homeland = cu:platinean } add_homeland = cu:south_andean }
-    every_state_region = { limit = { is_homeland = cu:portuguese } add_homeland = cu:iberian }
+    every_state_region = { limit = { is_homeland = cu:portuguese } add_homeland = cu:spanish }
     every_state_region = { limit = { is_homeland = cu:pueblo } add_homeland = cu:navajo }
     every_state_region = { limit = { is_homeland = cu:ruanda } add_homeland = cu:swahili }
     every_state_region = { limit = { is_homeland = cu:rundi } add_homeland = cu:swahili }
@@ -1430,7 +1430,6 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:sotho } add_homeland = cu:griqua }
     every_state_region = { limit = { is_homeland = cu:south_german } add_homeland = cu:north_german }
     every_state_region = { limit = { is_homeland = cu:south_italian } add_homeland = cu:north_italian }
-    every_state_region = { limit = { is_homeland = cu:spanish } add_homeland = cu:iberian }
     every_state_region = { limit = { is_homeland = cu:sudanese } add_homeland = cu:haratin }
     every_state_region = { limit = { is_homeland = cu:sukuma } add_homeland = cu:swahili }
     every_state_region = { limit = { is_homeland = cu:sulista } add_homeland = cu:south_andean }
@@ -1440,7 +1439,7 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:tajik } add_homeland = cu:pashtun }
     every_state_region = { limit = { is_homeland = cu:tarascan } add_homeland = cu:mayan }
     every_state_region = { limit = { is_homeland = cu:teda } add_homeland = cu:bambara }
-    every_state_region = { limit = { is_homeland = cu:telegu } add_homeland = cu:deccani }
+    every_state_region = { limit = { is_homeland = cu:telegu } add_homeland = cu:marathi }
     every_state_region = { limit = { is_homeland = cu:thai } add_homeland = cu:lao }
     every_state_region = { limit = { is_homeland = cu:tigray } add_homeland = cu:amhara }
     every_state_region = { limit = { is_homeland = cu:tiv } add_homeland = cu:akan }
@@ -1453,6 +1452,7 @@ vl_homelands_to_heritage_effect = {
     every_state_region = { limit = { is_homeland = cu:uruguayan } add_homeland = cu:south_andean }
     every_state_region = { limit = { is_homeland = cu:venezuelan } add_homeland = cu:south_andean }
     every_state_region = { limit = { is_homeland = cu:visayan } add_homeland = cu:filipino_mestizo }
+    every_state_region = { limit = { is_homeland = cu:wallonian } add_homeland = cu:dutch }
     every_state_region = { limit = { is_homeland = cu:welsh } add_homeland = cu:british }
     every_state_region = { limit = { is_homeland = cu:wolof } add_homeland = cu:bambara }
     every_state_region = { limit = { is_homeland = cu:xhosa } add_homeland = cu:griqua }
