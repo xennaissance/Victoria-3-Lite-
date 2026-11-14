@@ -13,10 +13,18 @@ on_game_started = {
     }
 }
 
-# Insurgent-country list and state cache (see below) are rebuilt every month; the list also whenever a revolution starts.
+# Insurgent-country list (see below) is rebuilt every month and whenever a revolution starts.
+# The state cache is built once a year; the monthly hook only builds it if it is missing
+# (a save from before this version, or one where it was never built).
 on_monthly_pulse = {
     on_actions = {
         vl_track_insurgents_on_action
+        vl_state_cache_if_missing_on_action
+    }
+}
+
+on_yearly_pulse = {
+    on_actions = {
         vl_state_cache_on_action
     }
 }
@@ -175,9 +183,9 @@ vl_track_insurgents_on_action = {
 
 # State cache (memoization). The AI's state_value (ai_strategies/vl_ai_strategy_inject.txt) asked every
 # country, for every state, whether the state has a potential strait province and rubber, oil or gold
-# potential. Those depend only on the state, so they are stored here once a month as state variables
-# (used as flags). vl_state_cache_ready tells state_value the cache exists; before it does (a save
-# loaded mid-month) vanilla's own checks run.
+# potential. Those depend only on the state, so they are stored here once a year as state variables
+# (used as flags). vl_state_cache_ready tells state_value the cache exists; before it does (an older save,
+# until its first monthly pulse) vanilla's own checks run.
 vl_state_cache_on_action = {
     effect = {
         every_state = {
@@ -207,4 +215,9 @@ vl_state_cache_on_action = {
         }
         set_global_variable = vl_state_cache_ready
     }
+}
+
+vl_state_cache_if_missing_on_action = {
+    trigger = { NOT = { has_global_variable = vl_state_cache_ready } }
+    on_actions = { vl_state_cache_on_action }
 }

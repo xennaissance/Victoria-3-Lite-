@@ -115,16 +115,16 @@ def patched_state_value(text):
     sv = sv[:ob] + branch + sv[cb + 1:]
     # Memoization: whether a state has a potential strait province and whether it has any rubber, oil or
     # gold potential only depend on the state, but were looked up for every country evaluating every state.
-    # vl_state_cache_on_action (on_actions/vl_on_actions.txt) stores both as state flags once a month; here
-    # they are checked first, so states without them skip the expensive lookups. Until the first monthly
+    # vl_state_cache_on_action (on_actions/vl_on_actions.txt) stores both as state flags once a year; here
+    # they are checked first, so states without them skip the expensive lookups. Until the first
     # refresh after loading a save (no vl_state_cache_ready global variable yet) vanilla's checks run as before.
     ready = "NOT = { has_global_variable = vl_state_cache_ready }"
     sv, n = re.subn(r"has_any_potential_strait_province\s*=\s*yes",
-                    "OR = { " + ready + " has_variable = vl_strait_any } # Victoria 3 Lite: monthly cache\n"
+                    "OR = { " + ready + " has_variable = vl_strait_any } # Victoria 3 Lite: yearly cache\n"
                     "\t\t\t\t\t\thas_any_potential_strait_province = yes", sv)
     assert n == 4, f"state_value strait checks: {n}"
     sv, n = re.subn(r"(scope:target_state\s*=\s*\{)(\s*OR\s*=\s*\{\s*AND\s*=\s*\{\s*root\s*=\s*\{\s*has_technology_researched\s*=\s*rubber_mastication)",
-                    r"\1\n\t\t\t\t\t\tOR = { " + ready + r" has_variable = vl_valuable_resources } # Victoria 3 Lite: monthly cache\2", sv)
+                    r"\1\n\t\t\t\t\t\tOR = { " + ready + r" has_variable = vl_valuable_resources } # Victoria 3 Lite: yearly cache\2", sv)
     assert n == 2, f"state_value resource checks: {n}"
     return sv
 

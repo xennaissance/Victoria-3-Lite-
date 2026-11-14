@@ -889,7 +889,7 @@ INJECT:ai_strategy_default = {
 				limit = {
 					scope:target_state = {
 						state_region = { is_important_strait_state_region = yes }
-						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: monthly cache
+						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: yearly cache
 						has_any_potential_strait_province = yes
 					}
 				}
@@ -901,7 +901,7 @@ INJECT:ai_strategy_default = {
 			else_if = { # Lesser Straits
 				limit = {
 					scope:target_state = {
-						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: monthly cache
+						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: yearly cache
 						has_any_potential_strait_province = yes
 					}
 				}
@@ -922,7 +922,7 @@ INJECT:ai_strategy_default = {
 			if = {
 				limit = {
 					scope:target_state = {
-						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_valuable_resources } # Victoria 3 Lite: monthly cache
+						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_valuable_resources } # Victoria 3 Lite: yearly cache
 						OR = {
 							AND = {
 								root = {
@@ -1122,7 +1122,7 @@ INJECT:ai_strategy_default = {
 					navy_size >= 100
 					scope:target_state = {
 						state_region = { is_important_strait_state_region = yes }
-						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: monthly cache
+						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: yearly cache
 						has_any_potential_strait_province = yes
 					}
 				}
@@ -1136,7 +1136,7 @@ INJECT:ai_strategy_default = {
 					country_rank >= rank_value:great_power
 					navy_size >= 100
 					scope:target_state = {
-						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: monthly cache
+						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_strait_any } # Victoria 3 Lite: yearly cache
 						has_any_potential_strait_province = yes
 					}
 				}
@@ -1405,7 +1405,7 @@ INJECT:ai_strategy_default = {
 			if = {
 				limit = {
 					scope:target_state = {
-						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_valuable_resources } # Victoria 3 Lite: monthly cache
+						OR = { NOT = { has_global_variable = vl_state_cache_ready } has_variable = vl_valuable_resources } # Victoria 3 Lite: yearly cache
 						OR = {
 							AND = {
 								root = {
