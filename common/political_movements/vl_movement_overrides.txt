@@ -2504,9 +2504,12 @@ REPLACE:movement_pro_slavery = {
 
 			add = {
 				owner = {
-					every_scope_state = { # Victoria 3 Lite: states, not every building
-						limit = { is_slave_state = yes has_building = building_barrack }
-						add = b:building_barrack.level
+					every_scope_state = { # Victoria 3 Lite: buildings of slave states only, not every building
+						limit = { is_slave_state = yes }
+						every_scope_building = {
+							limit = { is_building_type = building_barrack }
+							add = this.level
+						}
 					}
 				}
 
@@ -2536,9 +2539,12 @@ REPLACE:movement_pro_slavery = {
 
 			add = {
 				owner = {
-					every_scope_state = { # Victoria 3 Lite: states, not every building
-						limit = { is_slave_state = yes has_building = building_naval_administration }
-						add = b:building_naval_administration.level
+					every_scope_state = { # Victoria 3 Lite: buildings of slave states only, not every building
+						limit = { is_slave_state = yes }
+						every_scope_building = {
+							limit = { is_building_type = building_naval_administration }
+							add = this.level
+						}
 					}
 				}
 
