@@ -10,6 +10,8 @@ NAI = {
 	# Fewer AIs per day get their antagonize/befriend/threat scores and attitudes adjusted
 	# (each AI about every 8 days instead of 4). AI attitudes change a bit more slowly.
 	COUNTRY_GOAL_ADJUSTMENT_UPDATE_COUNT = 25			# vanilla 50
+	# AI fleets stick to the sea zone they patrol instead of re-picking it as often. War missions still happen.
+	FLEET_SEA_PROVINCE_ASSIGNMENT_STICKINESS = 3.0		# vanilla 1.5
 }
 
 NEconomy = {

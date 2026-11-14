@@ -195,6 +195,17 @@ def patch_ai():
         "\t" + block_text(text, "strategic_region_stance_type_scores").strip(),
         "",
         "\t" + patched_state_value(text).strip(),
+        "",
+        "\t# Victoria 3 Lite: minor and smaller AI powers want 75% of vanilla's navy (fewer ships and fleets for the navy AI).",
+        "\twanted_navy_size = {",
+        "\t\tvalue = wanted_navy_size_script_value",
+        "\t\tif = { limit = { country_rank <= rank_value:minor_power } multiply = 0.75 }",
+        "\t}",
+        "\twanted_num_supply_ships = {",
+        "\t\tvalue = wanted_navy_size_script_value",
+        "\t\tmultiply = 20",
+        "\t\tif = { limit = { country_rank <= rank_value:minor_power } multiply = 0.75 }",
+        "\t}",
         "}",
     ]
     write("common/ai_strategies/vl_ai_strategy_inject.txt", "\n".join(out) + "\n")

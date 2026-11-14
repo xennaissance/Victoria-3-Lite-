@@ -2246,4 +2246,15 @@ INJECT:ai_strategy_default = {
 			desc = "STATE_VALUE_CLAMP_OWNED"
 		}
 	}
+
+	# Victoria 3 Lite: minor and smaller AI powers want 75% of vanilla's navy (fewer ships and fleets for the navy AI).
+	wanted_navy_size = {
+		value = wanted_navy_size_script_value
+		if = { limit = { country_rank <= rank_value:minor_power } multiply = 0.75 }
+	}
+	wanted_num_supply_ships = {
+		value = wanted_navy_size_script_value
+		multiply = 20
+		if = { limit = { country_rank <= rank_value:minor_power } multiply = 0.75 }
+	}
 }
