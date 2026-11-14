@@ -1,0 +1,25 @@
+﻿# Victoria 3 Lite: values used by the "Pop Consolidation" game rule.
+# Pop scope. Total size of all pops in this pop's state that share its culture (or religion).
+# Used as order_by to find the largest culture and religion in a state.
+
+vl_state_size_of_pop_culture = {
+    value = 0
+    culture = { save_temporary_scope_as = vl_cons_culture }
+    state = {
+        every_scope_pop = {
+            limit = { culture = scope:vl_cons_culture }
+            add = total_size
+        }
+    }
+}
+
+vl_state_size_of_pop_religion = {
+    value = 0
+    religion = { save_temporary_scope_as = vl_cons_religion }
+    state = {
+        every_scope_pop = {
+            limit = { religion = scope:vl_cons_religion }
+            add = total_size
+        }
+    }
+}
