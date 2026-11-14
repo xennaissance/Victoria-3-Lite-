@@ -17,11 +17,13 @@ Early development (v0.1).
 Done:
 - **Pop Cultures** game rule (default: one culture). At game start every pop and every country's primary culture becomes Human.
 - **Pop Religions** game rule (default: one religion). At game start every pop and every country's state religion becomes Atheist.
+- **Costly Alerts** game rule (default: off). Skips the "low expected standard of living in state" alert, which is expensive to check.
 
 Not yet tested in game. Test checklist:
-1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_`.
+1. Start a new game with the mod on and both rules at their defaults. Check `logs/error.log` for lines mentioning `vl_` or `alert_types`.
 2. Open a few countries: primary culture should be Human, state religion Atheist, and pops should show no culture or religion discrimination.
-3. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
+3. With Costly Alerts off, the low standard of living alert should never appear; with it on, it should.
+4. Run to the benchmark date and time 50 s at speed 5. Compare against the same rules set to "Original".
 
 ## Installing for development
 Clone this repository into `Documents\Paradox Interactive\Victoria 3\mod\` and enable it in the launcher.

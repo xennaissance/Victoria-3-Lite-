@@ -24,3 +24,15 @@ vl_pop_religion = {
         flag = vl_original_religions
     }
 }
+
+vl_costly_alerts = {
+    default = vl_costly_alerts_off
+
+    vl_costly_alerts_off = {
+        flag = vl_costly_alerts_off
+    }
+
+    vl_costly_alerts_on = {
+        flag = vl_costly_alerts_on
+    }
+}
