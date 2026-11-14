@@ -1,8 +1,8 @@
 ﻿# Victoria 3 Lite: the single religion every pop follows with the "Pop Religions" rule at "One faith".
 # It is deliberately not Atheist, because vanilla penalises clergy for atheist pops.
-# The icon is a placeholder borrowed from Animist.
+# Icon: the vanilla dove from the "active peace deal" alert.
 vl_faith = {
-    icon = "gfx/interface/icons/religion_icons/animist.dds"
+    icon = "gfx/interface/icons/alert_icons/active_peace_deal.dds"
     heritage = vl_heritage_faith
     color = { 0.85 0.8 0.55 }
 }
